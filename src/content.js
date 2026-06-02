@@ -101,27 +101,41 @@ class DeepSeekResearchBot {
     const startTime = Date.now();
     let lastResponseLength = 0;
     let stableCount = 0;
-    
+
+    // Get initial message count
+    const initialMessages = document.querySelectorAll('.ds-message-container, [data-message-role], .message, [class*="message"]');
+    const initialCount = initialMessages.length;
+
     while (Date.now() - startTime < timeout) {
-      // Get the latest assistant message
-      const assistantMessages = Array.from(document.querySelectorAll('[data-message-role]'))
-        .filter(m => m.getAttribute('data-message-role') === 'assistant');
-      
+      // Strategy 1: Specific assistant selectors
+      let assistantMessages = Array.from(document.querySelectorAll('.ds-message-container, [data-message-role], .message, [class*="assistant"]'))
+        .filter(m => {
+          const role = m.getAttribute('data-message-role');
+          if (role === 'assistant') return true;
+          return m.classList.contains('assistant') || m.querySelector('.assistant');
+        });
+
+      // Strategy 2: Fallback - newest non-user message
+      if (assistantMessages.length === 0) {
+        const allMessages = document.querySelectorAll('.ds-message-container, [data-message-role], .message, [class*="message"]');
+        if (allMessages.length > initialCount) {
+          const latest = allMessages[allMessages.length - 1];
+          if (latest.getAttribute('data-message-role') !== 'user' && !latest.classList.contains('user')) {
+            assistantMessages = [latest];
+          }
+        }
+      }
+
       if (assistantMessages.length > 0) {
         const latestResponse = assistantMessages[assistantMessages.length - 1];
         const currentLength = (latestResponse.innerText || latestResponse.textContent || '').length;
-        
+
         // Check if response length is stable
-        if (currentLength === lastResponseLength && currentLength > 50) {
+        if (currentLength === lastResponseLength && currentLength > 10) {
           stableCount++;
-          // Stable for 4 checks (about 6-8 seconds)
           if (stableCount >= 4) {
             console.log('[RTK] ✓ Response appears complete and stable');
-            
-            // Wait a bit more for button to enable
             await this.sleep(2000);
-            
-            // Check if ready
             const isReady = await this.isDeepSeekReady();
             if (isReady) {
               console.log('[RTK] ✓ DeepSeek is ready for next question');
@@ -136,18 +150,18 @@ class DeepSeekResearchBot {
           }
         }
       }
-      
-      // Check if send button is enabled
+
+      // Strategy 3: Send button re-enabled = AI done
       const sendButton = await this.waitForSendButtonEnabled(2000);
-      if (sendButton) {
-        console.log('[RTK] ✓ Send button is ready');
+      if (sendButton && lastResponseLength > 10) {
+        console.log('[RTK] ✓ Send button ready and response received');
         await this.sleep(1000);
         return true;
       }
-      
+
       await this.sleep(1500);
     }
-    
+
     console.log('[RTK] ✓ Assuming ready state (timeout reached)');
     return true;
   }
@@ -325,34 +339,63 @@ class DeepSeekResearchBot {
     let lastContent = '';
     let stableCount = 0;
     let lastLength = 0;
+
+    // Get initial message count to detect NEW messages
+    const initialMessages = document.querySelectorAll('.ds-message-container, [data-message-role], .message, [class*="message"]');
+    const initialCount = initialMessages.length;
+    
+    // Diagnostic: log what message elements exist in the DOM
+    const allRoleEls = document.querySelectorAll('[data-message-role]');
+    const allMsgEls = document.querySelectorAll('[class*="message"]');
+    console.log(`[RTK] 🔍 DOM diagnostic: ${allRoleEls.length} [data-message-role] elements, ${allMsgEls.length} [class*=message] elements, ${initialCount} total candidates`);
+    if (allRoleEls.length > 0) {
+      allRoleEls.forEach((el, i) => console.log(`[RTK] 🔍   [data-message-role] #${i}: role="${el.getAttribute('data-message-role')}" classes="${el.className.substring(0, 80)}" text="${(el.innerText||'').substring(0, 60)}"`));
+    }
+    if (allMsgEls.length > 0 && allMsgEls.length <= 20) {
+      allMsgEls.forEach((el, i) => console.log(`[RTK] 🔍   [class*=message] #${i}: classes="${el.className.substring(0, 80)}" tag="${el.tagName}" text="${(el.innerText||'').substring(0, 40)}"`));
+    }
     
     while (Date.now() - startTime < timeout) {
       await this.sleep(1500);
       
-      // Find assistant messages
-      const assistantMessages = Array.from(document.querySelectorAll('[data-message-role]'))
-        .filter(m => m.getAttribute('data-message-role') === 'assistant');
+      // Strategy 1: Specific assistant selectors
+      let assistantMessages = Array.from(document.querySelectorAll('.ds-message-container, [data-message-role], .message, [class*="assistant"]'))
+        .filter(m => {
+          const role = m.getAttribute('data-message-role');
+          if (role === 'assistant') return true;
+          return m.classList.contains('assistant') || m.querySelector('.assistant');
+        });
+      
+      // Strategy 2: Fallback - find the newest message that isn't the user's
+      if (assistantMessages.length === 0) {
+        const allMessages = document.querySelectorAll('.ds-message-container, [data-message-role], .message, [class*="message"]');
+        if (allMessages.length > initialCount) {
+          const latest = allMessages[allMessages.length - 1];
+          // It's likely the assistant if it's not marked as user
+          if (latest.getAttribute('data-message-role') !== 'user' && !latest.classList.contains('user')) {
+            assistantMessages = [latest];
+          }
+        }
+      }
       
       if (assistantMessages.length > 0) {
         const latestResponse = assistantMessages[assistantMessages.length - 1];
         const responseText = latestResponse.innerText || latestResponse.textContent || '';
         const currentLength = responseText.length;
         
-        if (currentLength > lastLength && currentLength > 50) {
+        if (currentLength > lastLength && currentLength > 10) {
           lastLength = currentLength;
           lastContent = responseText;
           stableCount = 0;
           console.log(`[RTK] 📥 Receiving response... (${currentLength} chars)`);
           
-          // Notify sidepanel of progress
           this.notifySidePanel({ 
             type: 'responseProgress', 
             length: currentLength,
             preview: responseText.substring(0, 100)
           });
-        } else if (currentLength === lastLength && lastLength > 50) {
+        } else if (currentLength === lastLength && lastLength > 10) {
           stableCount++;
-          // Stable for 4 checks (6 seconds)
           if (stableCount >= 4) {
             console.log('[RTK] ✅ Response complete');
             this.conversationHistory.push({ 
@@ -361,17 +404,24 @@ class DeepSeekResearchBot {
               timestamp: Date.now() 
             });
             
-            // Notify sidepanel
             this.notifySidePanel({ 
               type: 'responseComplete', 
               content: lastContent 
             });
             
-            // Additional wait for DeepSeek to finalize
             await this.sleep(3000);
             return lastContent;
           }
         }
+      }
+
+      // Strategy 3: Emergency Fallback - if the send button is enabled, the AI is likely done
+      const sendButton = document.querySelector('button[type="submit"]') || document.querySelector('.ds-button--primary');
+      if (sendButton && !sendButton.disabled && !sendButton.classList.contains('ds-button--disabled') && sendButton.getAttribute('aria-disabled') !== 'true') {
+          if (lastLength > 10) {
+              console.log('[RTK] ✓ AI finished (Send button re-enabled)');
+              return lastContent;
+          }
       }
     }
     
