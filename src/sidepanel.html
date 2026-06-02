@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepSeek Research Bot</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      padding: 16px;
+      min-width: 320px;
+    }
+
+    .header {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #333;
+    }
+
+    h1 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .status-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: #252525;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      font-size: 13px;
+    }
+
+    .status-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+      animation: pulse 2s infinite;
+    }
+
+    .status-indicator.busy {
+      background: #fbbf24;
+    }
+
+    .status-indicator.error {
+      background: #ef4444;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .input-group {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      background: #252525;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: #e0e0e0;
+      font-size: 13px;
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #4ade80;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    button {
+      flex: 1;
+      padding: 10px 16px;
+      background: #4ade80;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    button:hover:not(:disabled) {
+      background: #22c55e;
+      transform: translateY(-1px);
+    }
+
+    button:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    button:disabled {
+      background: #333;
+      color: #666;
+      cursor: not-allowed;
+    }
+
+    button.secondary {
+      background: #333;
+      color: #e0e0e0;
+    }
+
+    button.secondary:hover:not(:disabled) {
+      background: #404040;
+    }
+
+    .log-container {
+      background: #0a0a0a;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 12px;
+      max-height: 300px;
+      overflow-y: auto;
+      font-size: 11px;
+      font-family: 'Monaco', 'Courier New', monospace;
+      line-height: 1.5;
+    }
+
+    .log-entry {
+      margin-bottom: 6px;
+      color: #999;
+    }
+
+    .log-entry.info { color: #60a5fa; }
+    .log-entry.success { color: #4ade80; }
+    .log-entry.warning { color: #fbbf24; }
+    .log-entry.error { color: #ef4444; }
+
+    .progress-bar {
+      width: 100%;
+      height: 4px;
+      background: #252525;
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #4ade80, #22c55e);
+      width: 0%;
+      transition: width 0.3s;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .stat-card {
+      background: #252525;
+      padding: 12px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: #4ade80;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .slider-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    input[type="range"] {
+      flex: 1;
+      height: 4px;
+      background: #333;
+      border-radius: 2px;
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      background: #4ade80;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .slider-value {
+      min-width: 30px;
+      text-align: right;
+      font-size: 13px;
+      font-weight: 600;
+      color: #4ade80;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: #666;
+    }
+
+    .empty-state-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🔬 DeepSeek Research Bot</h1>
+    <div class="subtitle">Automated deep research on chat.deepseek.com</div>
+  </div>
+
+  <div class="status-bar">
+    <div class="status-indicator" id="statusIndicator"></div>
+    <span id="statusText">Ready</span>
+  </div>
+
+  <!-- Quick Research Section -->
+  <div class="section">
+    <div class="section-title">Quick Research</div>
+    <div class="input-group">
+      <label for="quickQuery">Enter your question:</label>
+      <textarea id="quickQuery" placeholder="e.g., What are the latest Claude workflows?"></textarea>
+    </div>
+    <button id="quickResearchBtn">🔍 Quick Research</button>
+  </div>
+
+  <!-- Deep Research Section -->
+  <div class="section">
+    <div class="section-title">Deep Research Loop</div>
+    <div class="input-group">
+      <label for="deepQuery">Initial question:</label>
+      <textarea id="deepQuery" placeholder="e.g., Find out the latest info about Claude workflows"></textarea>
+    </div>
+    <div class="input-group">
+      <label for="iterations">Iterations: <span id="iterationsValue">3</span></label>
+      <div class="slider-container">
+        <input type="range" id="iterations" min="1" max="5" value="3">
+        <div class="slider-value">3</div>
+      </div>
+    </div>
+    <div class="input-group">
+      <label for="delay">Delay between messages (seconds): <span id="delayValue">6</span></label>
+      <div class="slider-container">
+        <input type="range" id="delay" min="3" max="15" value="6">
+        <div class="slider-value">6</div>
+      </div>
+    </div>
+    <button id="deepResearchBtn">🔄 Start Deep Research</button>
+    
+    <div class="progress-bar" id="progressBar" style="display: none;">
+      <div class="progress-bar-fill" id="progressBarFill"></div>
+    </div>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="section">
+    <div class="section-title">Session Stats</div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value" id="statMessages">0</div>
+        <div class="stat-label">Messages Sent</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statIterations">0</div>
+        <div class="stat-label">Iterations</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Log Section -->
+  <div class="section">
+    <div class="section-title">Activity Log</div>
+    <div class="log-container" id="logContainer">
+      <div class="empty-state">
+        <div class="empty-state-icon">📋</div>
+        <div>No activity yet</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

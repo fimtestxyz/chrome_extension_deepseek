@@ -1,0 +1,884 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Google News" [ref=e7] [cursor=pointer]:
+        - /url: ./?hl=en-US&gl=US&ceid=US%3Aen
+        - generic [ref=e9]: News
+      - generic [ref=e10]:
+        - search [ref=e12]:
+          - combobox "Search for topics, locations & sources" [ref=e19]: Trump UFO when:1d
+          - button "Advanced search" [ref=e20] [cursor=pointer]:
+            - generic [ref=e21]:
+              - generic "Advanced search" [ref=e22]:
+                - img [ref=e23]
+              - tooltip [ref=e25]: Advanced search
+          - button "Clear search" [ref=e26] [cursor=pointer]:
+            - img [ref=e27]
+          - button "Search" [ref=e30] [cursor=pointer]:
+            - img [ref=e31]
+        - generic [ref=e34]:
+          - generic [ref=e39]:
+            - button "Help" [ref=e40] [cursor=pointer]:
+              - img [ref=e42]
+            - tooltip [ref=e44]: Help
+          - generic [ref=e49]:
+            - button "Settings" [ref=e50] [cursor=pointer]:
+              - img [ref=e52]
+            - tooltip [ref=e55]: Settings
+      - generic [ref=e57]:
+        - button "Google apps" [ref=e61] [cursor=pointer]:
+          - img [ref=e62]
+        - link "Sign in" [ref=e65] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?passive=1209600&continue=https://news.google.com/search?q%3DTrump%2BUFO%2Bwhen:1d%26hl%3Den-US%26gl%3DUS%26ceid%3DUS:en&followup=https://news.google.com/search?q%3DTrump%2BUFO%2Bwhen:1d%26hl%3Den-US%26gl%3DUS%26ceid%3DUS:en&hl=en-US&ec=GAZAqgM
+    - navigation [ref=e68]:
+      - tablist [ref=e69]:
+        - tab "Home" [ref=e70] [cursor=pointer]:
+          - tab "Home" [ref=e71]
+        - tab "For you" [ref=e72] [cursor=pointer]:
+          - tab "For you" [ref=e73]
+        - tab "Following" [ref=e74] [cursor=pointer]:
+          - tab "Following" [ref=e75]
+        - tab "U.S." [ref=e78] [cursor=pointer]:
+          - tab "U.S." [ref=e79]
+        - tab "World" [ref=e80] [cursor=pointer]:
+          - tab "World" [ref=e81]
+        - tab "Local" [ref=e82] [cursor=pointer]:
+          - tab "Local" [ref=e83]
+        - tab "Business" [ref=e84] [cursor=pointer]:
+          - tab "Business" [ref=e85]
+        - tab "Technology" [ref=e86] [cursor=pointer]:
+          - tab "Technology" [ref=e87]
+        - tab "Entertainment" [ref=e88] [cursor=pointer]:
+          - tab "Entertainment" [ref=e89]
+        - tab "Sports" [ref=e90] [cursor=pointer]:
+          - tab "Sports" [ref=e91]
+        - tab "Science" [ref=e92] [cursor=pointer]:
+          - tab "Science" [ref=e93]
+        - tab "Health" [ref=e94] [cursor=pointer]:
+          - tab "Health" [ref=e95]
+  - main [ref=e99]:
+    - generic [ref=e101]:
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - link [ref=e107] [cursor=pointer]:
+            - /url: ./read/CBMiaEFVX3lxTE9YS2JpREQtVXY3LURwVElVQ1hRd1FVRVExeXR6WHdURlRvTmNFby1HZXdLTHpkWlp4OGppOWtDWGVlMTZEdlU0enlqLTA0ckRnYk5BRklOcnVDQ1Nic285XzVaRWZpOGlm?hl=en-US&gl=US&ceid=US%3Aen
+          - generic [ref=e109]:
+            - generic [ref=e110]:
+              - generic [ref=e113]: U.S. Department of War (.gov)
+              - generic [ref=e117]:
+                - generic:
+                  - button "More - Presidential Unsealing and Reporting System for UAP Encounters (PURSUE)" [ref=e118] [cursor=pointer]:
+                    - img [ref=e120]
+                  - tooltip [ref=e122]: More
+            - link "Presidential Unsealing and Reporting System for UAP Encounters (PURSUE) - U.S. Department of War (.gov) - 2 hours ago" [ref=e123] [cursor=pointer]:
+              - /url: ./read/CBMiaEFVX3lxTE9YS2JpREQtVXY3LURwVElVQ1hRd1FVRVExeXR6WHdURlRvTmNFby1HZXdLTHpkWlp4OGppOWtDWGVlMTZEdlU0enlqLTA0ckRnYk5BRklOcnVDQ1Nic285XzVaRWZpOGlm?hl=en-US&gl=US&ceid=US%3Aen
+              - text: Presidential Unsealing and Reporting System for UAP Encounters (PURSUE)
+          - figure [ref=e124]
+        - time [ref=e126]: 2 hours ago
+      - generic [ref=e127]:
+        - separator [ref=e129]
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - link [ref=e134] [cursor=pointer]:
+              - /url: ./read/CBMirAFBVV95cUxNQ1B2ZFczekRJbFZoc0Z3UVVoYVljU3U1VDdGY3lMbWlJc2MwajhWMFZGM2dFZ2I0WUFBVUxZZ2RvdUZWT0ZueS1IWHBidmRrTE94YU1xcU5NYzBPcF96N0t2NVYxTWh5QnEwY0hJdEFLdHp1YWhDMTd5QUlpWVFZMUV4UVF1eGxTX3RMYVZhODRobnJSRTE2aHU3dUhuZ200a2kzOEZsVjlydzUx0gGyAUFVX3lxTFBMdWZUekNYSjU4b3k1eXFGeE93aWx5RWhrdnI5M3c4NlBKaHhJRWlSbEg0YXU3bTN1OWFidS14LWd6SEc1R1VQVE9CdXBUdlQzUXBKSjF3aFlQVVNnS3k2amsxQjcwejNBT05rczBxLUpqTVJ3aFNCQk1rdDV6Zk1fWkNMQm9kdVJVRmFETXA1Vy0wQXhxMTVfY09OUVBjRDdUNjdVTGRyNU5jNDlfU01BeUE?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e136]:
+              - generic [ref=e137]:
+                - generic [ref=e140]: Fox News
+                - generic [ref=e144]:
+                  - generic:
+                    - button "More - White House drops eerie aliens 'walk among us’ warning — but the truth is much closer to home" [ref=e145] [cursor=pointer]:
+                      - img [ref=e147]
+                    - tooltip [ref=e149]: More
+              - link "White House drops eerie aliens 'walk among us’ warning — but the truth is much closer to home - Fox News - 1 hour ago - By Ashley J. DiMella" [ref=e150] [cursor=pointer]:
+                - /url: ./read/CBMirAFBVV95cUxNQ1B2ZFczekRJbFZoc0Z3UVVoYVljU3U1VDdGY3lMbWlJc2MwajhWMFZGM2dFZ2I0WUFBVUxZZ2RvdUZWT0ZueS1IWHBidmRrTE94YU1xcU5NYzBPcF96N0t2NVYxTWh5QnEwY0hJdEFLdHp1YWhDMTd5QUlpWVFZMUV4UVF1eGxTX3RMYVZhODRobnJSRTE2aHU3dUhuZ200a2kzOEZsVjlydzUx0gGyAUFVX3lxTFBMdWZUekNYSjU4b3k1eXFGeE93aWx5RWhrdnI5M3c4NlBKaHhJRWlSbEg0YXU3bTN1OWFidS14LWd6SEc1R1VQVE9CdXBUdlQzUXBKSjF3aFlQVVNnS3k2amsxQjcwejNBT05rczBxLUpqTVJ3aFNCQk1rdDV6Zk1fWkNMQm9kdVJVRmFETXA1Vy0wQXhxMTVfY09OUVBjRDdUNjdVTGRyNU5jNDlfU01BeUE?hl=en-US&gl=US&ceid=US%3Aen
+                - text: White House drops eerie aliens 'walk among us’ warning — but the truth is much closer to home
+            - figure [ref=e151]
+          - generic [ref=e152]:
+            - time [ref=e153]: 1 hour ago
+            - separator [ref=e154]
+            - generic [ref=e155]: By Ashley J. DiMella
+      - generic [ref=e156]:
+        - separator [ref=e158]
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - link [ref=e163] [cursor=pointer]:
+              - /url: ./read/CBMiekFVX3lxTE0tRnRzNktJVTRBRkZ0c1FtYnhlV01xeFJJVTFyWlpwTHF0OXZ0MkdkMXN2Y3dRb3RrVDRMS2cwQjlIeVg2ek16WlFoWmdMT21BRW9hNVlIejNncHBoN2lkeE56bnVGNjI3QUdZLWlRVHNoX1VGTU1lNFlB?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e165]:
+              - generic [ref=e166]:
+                - generic [ref=e169]: Center for Immigration Studies
+                - generic [ref=e173]:
+                  - generic:
+                    - 'button "More - Trump to Banks: Illegal Aliens Are Bad Credit Risks" [ref=e174] [cursor=pointer]':
+                      - img [ref=e176]
+                    - tooltip [ref=e178]: More
+              - 'link "Trump to Banks: Illegal Aliens Are Bad Credit Risks - Center for Immigration Studies - 14 hours ago - By Andrew Arthur" [ref=e179] [cursor=pointer]':
+                - /url: ./read/CBMiekFVX3lxTE0tRnRzNktJVTRBRkZ0c1FtYnhlV01xeFJJVTFyWlpwTHF0OXZ0MkdkMXN2Y3dRb3RrVDRMS2cwQjlIeVg2ek16WlFoWmdMT21BRW9hNVlIejNncHBoN2lkeE56bnVGNjI3QUdZLWlRVHNoX1VGTU1lNFlB?hl=en-US&gl=US&ceid=US%3Aen
+                - text: "Trump to Banks: Illegal Aliens Are Bad Credit Risks"
+            - figure [ref=e180]
+          - generic [ref=e181]:
+            - time [ref=e182]: 14 hours ago
+            - separator [ref=e183]
+            - generic [ref=e184]: By Andrew Arthur
+      - generic [ref=e185]:
+        - separator [ref=e187]
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - link [ref=e192] [cursor=pointer]:
+              - /url: ./read/CBMiswFBVV95cUxPb2lnVTV5MnNNNHhLdUU3SlpqRkJvQ21Rd1V6cl9VbWVZOEVhY1NVTDFJUy1lbXV3V3BZdFFhZlRzQXJ2aERPN3FCS2RIVFFOVWRsTHZjQ3ZxMXlRT0RtSWR0N3VrbGIxREVWVmRrdFo3aGZybk5mNGs2SDVhQjc5aFhuMEk3Y1VxeTZGdUVrc3lVel9BQ21OVExXbWhBSXh0cDZqZ1RfZ3NaamQ4Vm9wV2RZRQ?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - generic [ref=e198]: USA Herald
+                - generic [ref=e202]:
+                  - generic:
+                    - button "More - Trump’s UFO files reveal mysterious flying objects spotted by Apollo astronauts on the Moon" [ref=e203] [cursor=pointer]:
+                      - img [ref=e205]
+                    - tooltip [ref=e207]: More
+              - link "Trump’s UFO files reveal mysterious flying objects spotted by Apollo astronauts on the Moon - USA Herald - 1 hour ago - By Jackie Allen" [ref=e208] [cursor=pointer]:
+                - /url: ./read/CBMiswFBVV95cUxPb2lnVTV5MnNNNHhLdUU3SlpqRkJvQ21Rd1V6cl9VbWVZOEVhY1NVTDFJUy1lbXV3V3BZdFFhZlRzQXJ2aERPN3FCS2RIVFFOVWRsTHZjQ3ZxMXlRT0RtSWR0N3VrbGIxREVWVmRrdFo3aGZybk5mNGs2SDVhQjc5aFhuMEk3Y1VxeTZGdUVrc3lVel9BQ21OVExXbWhBSXh0cDZqZ1RfZ3NaamQ4Vm9wV2RZRQ?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Trump’s UFO files reveal mysterious flying objects spotted by Apollo astronauts on the Moon
+            - figure [ref=e209]
+          - generic [ref=e210]:
+            - time [ref=e211]: 1 hour ago
+            - separator [ref=e212]
+            - generic [ref=e213]: By Jackie Allen
+      - generic [ref=e214]:
+        - separator [ref=e216]
+        - generic [ref=e218]:
+          - generic [ref=e219]:
+            - link [ref=e221] [cursor=pointer]:
+              - /url: ./read/CBMizwFBVV95cUxOOEJBU21YWGZXTGVNaXZkd1MzcEJqWFJpNVVlX3pLdVluSVNSaVctNC1GZkMxRUtTc3BQZmthb2s4Y2tBeFRtMkFqcmhzLWJfOFAxMXh5dF94c2dUcjdqTENoVkdJOWMzbHg1OHk3bEtDVjlOazc1b2F1YlRpR0VSdm4tLWNvaGlhQlRtU0liN0lTTlF3SDZhSHpiSl84UGR1TXlvTUl6Z3d2SGdzZzEtSk40amxWOHd0Q0kzbkZ4Q0pCUWtSV3Roam90YUdOMlE?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e223]:
+              - generic [ref=e224]:
+                - generic [ref=e227]: Open Magazine
+                - generic [ref=e231]:
+                  - generic:
+                    - button "More - CIA-Backed Researcher Says US Has Four Types of Alien Bodies in Its Possession. Here’s What’s Happening" [ref=e232] [cursor=pointer]:
+                      - img [ref=e234]
+                    - tooltip [ref=e236]: More
+              - link "CIA-Backed Researcher Says US Has Four Types of Alien Bodies in Its Possession. Here’s What’s Happening - Open Magazine - 14 hours ago" [ref=e237] [cursor=pointer]:
+                - /url: ./read/CBMizwFBVV95cUxOOEJBU21YWGZXTGVNaXZkd1MzcEJqWFJpNVVlX3pLdVluSVNSaVctNC1GZkMxRUtTc3BQZmthb2s4Y2tBeFRtMkFqcmhzLWJfOFAxMXh5dF94c2dUcjdqTENoVkdJOWMzbHg1OHk3bEtDVjlOazc1b2F1YlRpR0VSdm4tLWNvaGlhQlRtU0liN0lTTlF3SDZhSHpiSl84UGR1TXlvTUl6Z3d2SGdzZzEtSk40amxWOHd0Q0kzbkZ4Q0pCUWtSV3Roam90YUdOMlE?hl=en-US&gl=US&ceid=US%3Aen
+                - text: CIA-Backed Researcher Says US Has Four Types of Alien Bodies in Its Possession. Here’s What’s Happening
+            - figure [ref=e238]
+          - time [ref=e240]: 14 hours ago
+      - generic [ref=e241]:
+        - separator [ref=e243]
+        - generic [ref=e245]:
+          - generic [ref=e246]:
+            - link [ref=e248] [cursor=pointer]:
+              - /url: ./read/CBMigwJBVV95cUxPR2NyamRuQXdrUlY2VGlLdUhsMFZ0MXBmYmJXbW1SWUpyUDlBd19ISkZUQ0pxQzhKcFFOTGdnZ0pwYVVWOGsyODBOUUp5WnNrcllxMmVmTmJEdnkteU9qRC1vLWdOOURsMjhrZTI3azktOWZOZHMweXM0RzRLaF9va0FNSlVGSDdNSWtRZnpWcjd6NFNZMkRuYUR2bGJKMlNsMTlOdzBDRmVNRUJYRkNaaU9CTUgwbEROTGIxRXpzVHJpSW1TazFicnFLbG9ReGRfaFd2aXBIdTRoSE5TdFc1TXdKaXRXM0o1MXJqaDl5d3JHZDNGaXlhTHlrM0dFTHdoTUdR0gGIAkFVX3lxTE5EMF9McXNtMFJhMGhpMkFKVW85SUNIZWdfXzBtb1lLbXlOVW9rTng5NkNEaHdpZU5zQmhsTy1kSTFJSGh4Si1DTGlDNUJPdE9nMUZJTUhhSEVsMmVuQ19tMkl5U2Z0dnFBb0RuSUZIaUpVN015SXNXMmhxZE1jbjNaa0pBX2JBbHlkSWtQaXFVNnVrcldpWERsb0hUOHBPTTFza0R5SVJTUUpZcm01SFlKNEJtczJHYWV0UHJzcExmU2xGVDBxaWxYTkc0Ym9Pb0JhUEtvbDJVbVc1dDVBNGdrQzkxbHJ5NGRwVWtyTHFNbFREbDA2RmVlVmV2NmlLLTdCSlV6bDNOYg?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e250]:
+              - generic [ref=e251]:
+                - generic [ref=e254]: The Economic Times
+                - generic [ref=e258]:
+                  - generic:
+                    - 'button "More - ''People totally FASCINATED by it…'': Trump drops UFO bombshell, hints at more ALIEN files release" [ref=e259] [cursor=pointer]':
+                      - img [ref=e261]
+                    - tooltip [ref=e263]: More
+              - 'link "''People totally FASCINATED by it…'': Trump drops UFO bombshell, hints at more ALIEN files release - The Economic Times - 13 hours ago" [ref=e264] [cursor=pointer]':
+                - /url: ./read/CBMigwJBVV95cUxPR2NyamRuQXdrUlY2VGlLdUhsMFZ0MXBmYmJXbW1SWUpyUDlBd19ISkZUQ0pxQzhKcFFOTGdnZ0pwYVVWOGsyODBOUUp5WnNrcllxMmVmTmJEdnkteU9qRC1vLWdOOURsMjhrZTI3azktOWZOZHMweXM0RzRLaF9va0FNSlVGSDdNSWtRZnpWcjd6NFNZMkRuYUR2bGJKMlNsMTlOdzBDRmVNRUJYRkNaaU9CTUgwbEROTGIxRXpzVHJpSW1TazFicnFLbG9ReGRfaFd2aXBIdTRoSE5TdFc1TXdKaXRXM0o1MXJqaDl5d3JHZDNGaXlhTHlrM0dFTHdoTUdR0gGIAkFVX3lxTE5EMF9McXNtMFJhMGhpMkFKVW85SUNIZWdfXzBtb1lLbXlOVW9rTng5NkNEaHdpZU5zQmhsTy1kSTFJSGh4Si1DTGlDNUJPdE9nMUZJTUhhSEVsMmVuQ19tMkl5U2Z0dnFBb0RuSUZIaUpVN015SXNXMmhxZE1jbjNaa0pBX2JBbHlkSWtQaXFVNnVrcldpWERsb0hUOHBPTTFza0R5SVJTUUpZcm01SFlKNEJtczJHYWV0UHJzcExmU2xGVDBxaWxYTkc0Ym9Pb0JhUEtvbDJVbVc1dDVBNGdrQzkxbHJ5NGRwVWtyTHFNbFREbDA2RmVlVmV2NmlLLTdCSlV6bDNOYg?hl=en-US&gl=US&ceid=US%3Aen
+                - text: "'People totally FASCINATED by it…': Trump drops UFO bombshell, hints at more ALIEN files release"
+            - figure [ref=e265]
+          - time [ref=e267]: 13 hours ago
+      - generic [ref=e268]:
+        - separator [ref=e270]
+        - generic [ref=e272]:
+          - generic [ref=e273]:
+            - link [ref=e275] [cursor=pointer]:
+              - /url: ./read/CBMiqANBVV95cUxQRWYxSnhLWUYxTEZIOVhOU2tCTkRkQTlNMmlZUVhRQzVCb3hZajRmdzUzLVc0UGhqdlNvMURHa2d3NFhiX0N2WmVQbm0zZDBfZzh3akkta29yYzAyc296RkR4cFlRX05tcFp4XzJONHNHdUZBbE9xSjBqVGhXSDRQLWFCX2FQb0RwTFZ1MEUySV9pX0Z2bTFUaUROQURnVmhVaDYtWHRQeWxwZFVSTXk3S0QwTVkzdkMwcGdVM3lyUXhVQjRLWFVkZFdrNk5Wc0hNUjZBdU53QnhqWnExNDY0ZUYxd0J0UkxDX2xscXZWc0c0bm12R0dHZlhZTFpRTWJUUW9OTUVWY2QtUjJIX2gtTDJHWkJWWFdROUVHVlp5UElIeXJHR2FtMXZLeS1CR21UZzNnd2ZwTzJfTUhlR0labk1ZelFYSVZqYk1DR1dFaXA0b3N4QmlGX1RuQUU1Y2xuTDdiYXZWaDF0c2E4VGhraktxblp1aDlrNkpZNGJLSTZ5blhySUE0WkI0WU8tU0VPVXFVc1lhaWF2N2ZBVmJZRC1sZGxONVpi?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e277]:
+              - generic [ref=e278]:
+                - generic [ref=e281]: KABB
+                - generic [ref=e285]:
+                  - generic:
+                    - 'button "More - ''Terrific person'': Trump showers Tulsi Gabbard with praise days after shocking resignation" [ref=e286] [cursor=pointer]':
+                      - img [ref=e288]
+                    - tooltip [ref=e290]: More
+              - 'link "''Terrific person'': Trump showers Tulsi Gabbard with praise days after shocking resignation - KABB - 20 hours ago" [ref=e291] [cursor=pointer]':
+                - /url: ./read/CBMiqANBVV95cUxQRWYxSnhLWUYxTEZIOVhOU2tCTkRkQTlNMmlZUVhRQzVCb3hZajRmdzUzLVc0UGhqdlNvMURHa2d3NFhiX0N2WmVQbm0zZDBfZzh3akkta29yYzAyc296RkR4cFlRX05tcFp4XzJONHNHdUZBbE9xSjBqVGhXSDRQLWFCX2FQb0RwTFZ1MEUySV9pX0Z2bTFUaUROQURnVmhVaDYtWHRQeWxwZFVSTXk3S0QwTVkzdkMwcGdVM3lyUXhVQjRLWFVkZFdrNk5Wc0hNUjZBdU53QnhqWnExNDY0ZUYxd0J0UkxDX2xscXZWc0c0bm12R0dHZlhZTFpRTWJUUW9OTUVWY2QtUjJIX2gtTDJHWkJWWFdROUVHVlp5UElIeXJHR2FtMXZLeS1CR21UZzNnd2ZwTzJfTUhlR0labk1ZelFYSVZqYk1DR1dFaXA0b3N4QmlGX1RuQUU1Y2xuTDdiYXZWaDF0c2E4VGhraktxblp1aDlrNkpZNGJLSTZ5blhySUE0WkI0WU8tU0VPVXFVc1lhaWF2N2ZBVmJZRC1sZGxONVpi?hl=en-US&gl=US&ceid=US%3Aen
+                - text: "'Terrific person': Trump showers Tulsi Gabbard with praise days after shocking resignation"
+            - figure [ref=e292]
+          - time [ref=e294]: 20 hours ago
+      - generic [ref=e295]:
+        - separator [ref=e297]
+        - generic [ref=e299]:
+          - generic [ref=e300]:
+            - link [ref=e302] [cursor=pointer]:
+              - /url: ./read/CBMiekFVX3lxTE85RGM4T2lyOHRZY2ZsdDJEVEphc01lQjItaE5ISC1xdk9OV2dzc3BoLW5SdTRQWHN4eGhiU3ZfNlE5NjlocjNVWDYzUU1GS2pjd0FMN2dtSDZIcU5wTXRpRzRfRzJFMEU4d2l4VWwyU1YxcjV4Z1UxTTJB?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e304]:
+              - generic [ref=e305]:
+                - generic [ref=e308]: AOL.com
+                - generic [ref=e312]:
+                  - generic:
+                    - 'button "More - Area 51 hit with 17 earthquakes in a single day as Trump promises fresh UFO files release: ‘Worth discussing’" [ref=e313] [cursor=pointer]':
+                      - img [ref=e315]
+                    - tooltip [ref=e317]: More
+              - 'link "Area 51 hit with 17 earthquakes in a single day as Trump promises fresh UFO files release: ‘Worth discussing’ - AOL.com - 7 hours ago - By Anthony Blair" [ref=e318] [cursor=pointer]':
+                - /url: ./read/CBMiekFVX3lxTE85RGM4T2lyOHRZY2ZsdDJEVEphc01lQjItaE5ISC1xdk9OV2dzc3BoLW5SdTRQWHN4eGhiU3ZfNlE5NjlocjNVWDYzUU1GS2pjd0FMN2dtSDZIcU5wTXRpRzRfRzJFMEU4d2l4VWwyU1YxcjV4Z1UxTTJB?hl=en-US&gl=US&ceid=US%3Aen
+                - text: "Area 51 hit with 17 earthquakes in a single day as Trump promises fresh UFO files release: ‘Worth discussing’"
+            - figure [ref=e319]
+          - generic [ref=e320]:
+            - time [ref=e321]: 7 hours ago
+            - separator [ref=e322]
+            - generic [ref=e323]: By Anthony Blair
+      - generic [ref=e324]:
+        - separator [ref=e326]
+        - generic [ref=e328]:
+          - generic [ref=e329]:
+            - link [ref=e331] [cursor=pointer]:
+              - /url: ./read/CBMilwFBVV95cUxNaGJoMEdkb2JwQjZObnZoRU5zOUNiYXhVaUt0cWJHWDQ5R1h2NVkweDhGT1hUMVRBR2I1OTBxSjhsR0FGaThzVjRmWHRmQ0hYLXZMNzg4YjZURGxOekdBVHo4Z1FxUE1oaUV4Ymw0S3dzUnppSHlUX1ltTW9nUm9rTWNwUGlHelhyT0NCZFgzajhwdm50ZUtn?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e333]:
+              - generic [ref=e334]:
+                - generic [ref=e337]: Newsweek
+                - generic [ref=e341]:
+                  - generic:
+                    - button "More - Steven Spielberg’s ‘Disclosure Day’ Reveals its Aliens" [ref=e342] [cursor=pointer]:
+                      - img [ref=e344]
+                    - tooltip [ref=e346]: More
+              - link "Steven Spielberg’s ‘Disclosure Day’ Reveals its Aliens - Newsweek - 15 hours ago" [ref=e347] [cursor=pointer]:
+                - /url: ./read/CBMilwFBVV95cUxNaGJoMEdkb2JwQjZObnZoRU5zOUNiYXhVaUt0cWJHWDQ5R1h2NVkweDhGT1hUMVRBR2I1OTBxSjhsR0FGaThzVjRmWHRmQ0hYLXZMNzg4YjZURGxOekdBVHo4Z1FxUE1oaUV4Ymw0S3dzUnppSHlUX1ltTW9nUm9rTWNwUGlHelhyT0NCZFgzajhwdm50ZUtn?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Steven Spielberg’s ‘Disclosure Day’ Reveals its Aliens
+            - figure [ref=e348]
+          - time [ref=e350]: 15 hours ago
+      - generic [ref=e351]:
+        - separator [ref=e353]
+        - generic [ref=e355]:
+          - generic [ref=e356]:
+            - link [ref=e358] [cursor=pointer]:
+              - /url: ./read/CBMirgFBVV95cUxPRFNRUnFnTk5ETXpDSVZleEItdlBnZWlvdHJjbXJQTEtkZWhOZ3ZJNGMyVzdpMTY3Uk82enJkUGlmUjNwYnYzUG10OHZEdndTRENGQjUwdXZwMUwtM0U5MXJ6cFBMdnlkYW1DTmVQOWtnY3R2ajBTV0ExMFlIbmttd2dZRHo1blRnRGR0R1h4UmotN0MyLUlmcFdDWWVXUXN4ekpKTzFsWUNFWG55aEE?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e360]:
+              - generic [ref=e361]:
+                - generic [ref=e364]: USA Herald
+                - generic [ref=e368]:
+                  - generic:
+                    - 'button "More - NASA Boss Breaks Silence on Trump’s UFO Bombshell: “We Kept It Buried in a File Somewhere”" [ref=e369] [cursor=pointer]':
+                      - img [ref=e371]
+                    - tooltip [ref=e373]: More
+              - 'link "NASA Boss Breaks Silence on Trump’s UFO Bombshell: “We Kept It Buried in a File Somewhere” - USA Herald - 13 hours ago" [ref=e374] [cursor=pointer]':
+                - /url: ./read/CBMirgFBVV95cUxPRFNRUnFnTk5ETXpDSVZleEItdlBnZWlvdHJjbXJQTEtkZWhOZ3ZJNGMyVzdpMTY3Uk82enJkUGlmUjNwYnYzUG10OHZEdndTRENGQjUwdXZwMUwtM0U5MXJ6cFBMdnlkYW1DTmVQOWtnY3R2ajBTV0ExMFlIbmttd2dZRHo1blRnRGR0R1h4UmotN0MyLUlmcFdDWWVXUXN4ekpKTzFsWUNFWG55aEE?hl=en-US&gl=US&ceid=US%3Aen
+                - text: "NASA Boss Breaks Silence on Trump’s UFO Bombshell: “We Kept It Buried in a File Somewhere”"
+            - figure [ref=e375]
+          - time [ref=e377]: 13 hours ago
+      - generic [ref=e378]:
+        - separator [ref=e380]
+        - generic [ref=e382]:
+          - generic [ref=e383]:
+            - link [ref=e385] [cursor=pointer]:
+              - /url: ./read/CBMi9AFBVV95cUxNcEJMNUQ5R09WMFdNNnFMMFVFMGpncE9NQ3hnWTQwWFM5SjF6UnJNb0g3QklQWVlNbkZLZEFkd2Rpck5wNW00UFg5OC12dXdYa0dJdlVIdHVKNnZkc1BYc1podTRDZzlFTUYta29YZ3BKcEt3WUZZZ1g4Q0lQLVFDYXVoMFVDS2dya2hUaGdqUmE5N251MF9mQlJmdGlxaDN2X2xJcE93UHBxVTVLT0hlcWpwMW9ueV9zNlRWdTJmT09jYmZJVnlKcXFNblowc2k2b1ZZN1Y1SDRNQVhRakYwQVJ5NTZVTmtxRlZZS2dVZ0hvYVAy?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e387]:
+              - generic [ref=e388]:
+                - generic [ref=e391]: The Economic Times
+                - generic [ref=e395]:
+                  - generic:
+                    - 'button "More - ''People totally FASCINATED by it…'': Trump drops UFO bombshell, hints at more ALIEN files release" [ref=e396] [cursor=pointer]':
+                      - img [ref=e398]
+                    - tooltip [ref=e400]: More
+              - 'link "''People totally FASCINATED by it…'': Trump drops UFO bombshell, hints at more ALIEN files release - The Economic Times - 13 hours ago" [ref=e401] [cursor=pointer]':
+                - /url: ./read/CBMi9AFBVV95cUxNcEJMNUQ5R09WMFdNNnFMMFVFMGpncE9NQ3hnWTQwWFM5SjF6UnJNb0g3QklQWVlNbkZLZEFkd2Rpck5wNW00UFg5OC12dXdYa0dJdlVIdHVKNnZkc1BYc1podTRDZzlFTUYta29YZ3BKcEt3WUZZZ1g4Q0lQLVFDYXVoMFVDS2dya2hUaGdqUmE5N251MF9mQlJmdGlxaDN2X2xJcE93UHBxVTVLT0hlcWpwMW9ueV9zNlRWdTJmT09jYmZJVnlKcXFNblowc2k2b1ZZN1Y1SDRNQVhRakYwQVJ5NTZVTmtxRlZZS2dVZ0hvYVAy?hl=en-US&gl=US&ceid=US%3Aen
+                - text: "'People totally FASCINATED by it…': Trump drops UFO bombshell, hints at more ALIEN files release"
+            - figure [ref=e402]
+          - time [ref=e404]: 13 hours ago
+      - generic [ref=e405]:
+        - separator [ref=e407]
+        - generic [ref=e409]:
+          - generic [ref=e410]:
+            - link [ref=e412] [cursor=pointer]:
+              - /url: ./read/CBMihwFBVV95cUxOR3Y1clp3SUh0RHpvbTBIZ1cyX3F2MnE1eHR4emNMS1k4NXlTUjdVY2YtMW03R0xicjg3a1J0dmVpLWdTVE5PMnRlcGl0Skp6SllSalB3SkM1V2piVEZPMGtoZy1wbVNuTzJRSF9Bdjd3Y2t4YmxxQWZIVmZoYUxwdnFQUGhGY2M?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e414]:
+              - generic [ref=e415]:
+                - generic [ref=e418]: AOL.com
+                - generic [ref=e422]:
+                  - generic:
+                    - button "More - Declassified UFO files show new evidence of possible invasion by mysterious silver spheres" [ref=e423] [cursor=pointer]:
+                      - img [ref=e425]
+                    - tooltip [ref=e427]: More
+              - link "Declassified UFO files show new evidence of possible invasion by mysterious silver spheres - AOL.com - 5 hours ago - By Reanna Smith" [ref=e428] [cursor=pointer]:
+                - /url: ./read/CBMihwFBVV95cUxOR3Y1clp3SUh0RHpvbTBIZ1cyX3F2MnE1eHR4emNMS1k4NXlTUjdVY2YtMW03R0xicjg3a1J0dmVpLWdTVE5PMnRlcGl0Skp6SllSalB3SkM1V2piVEZPMGtoZy1wbVNuTzJRSF9Bdjd3Y2t4YmxxQWZIVmZoYUxwdnFQUGhGY2M?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Declassified UFO files show new evidence of possible invasion by mysterious silver spheres
+            - figure [ref=e429]
+          - generic [ref=e430]:
+            - time [ref=e431]: 5 hours ago
+            - separator [ref=e432]
+            - generic [ref=e433]: By Reanna Smith
+      - generic [ref=e434]:
+        - separator [ref=e436]
+        - generic [ref=e438]:
+          - generic [ref=e439]:
+            - link [ref=e441] [cursor=pointer]:
+              - /url: ./read/CBMi5wFBVV95cUxPcW8xdnY3aHk4NS1GcGlFSkJfTkNSNE1iNllTZUF5TmpMc0Zibkc0dU5oQnpPV0JvV0YxWXptMGx4LWhJX2JkRkxjemRFSmRzenFsOElRaVdTTXVQTWZuelVVbHVyMlZVSWhzNkRBRGxJZ1hLN3ZTRG9HR0F0UGZwUWdrSlZkdDI2WVJ2elE4emNaNWxiOGUzWjAzcS0wdFhKeVI1a3MwenMwWklLS3VlbFVha0xyRW9wRU1heGxYVl9UVko1REJXRzktTThqUHFHcHlldUwycTIwMUlyb2NvTGZFZzBvQTg?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e443]:
+              - generic [ref=e444]:
+                - generic [ref=e447]: USA Herald
+                - generic [ref=e451]:
+                  - generic:
+                    - button "More - Multiple Pastors Claim U.S. Military Intelligence Officers Secretly Briefed Them To Prepare Their Congregations For UAP Disclosure" [ref=e452] [cursor=pointer]:
+                      - img [ref=e454]
+                    - tooltip [ref=e456]: More
+              - link "Multiple Pastors Claim U.S. Military Intelligence Officers Secretly Briefed Them To Prepare Their Congregations For UAP Disclosure - USA Herald - 15 hours ago - By Samuel Lopez" [ref=e457] [cursor=pointer]:
+                - /url: ./read/CBMi5wFBVV95cUxPcW8xdnY3aHk4NS1GcGlFSkJfTkNSNE1iNllTZUF5TmpMc0Zibkc0dU5oQnpPV0JvV0YxWXptMGx4LWhJX2JkRkxjemRFSmRzenFsOElRaVdTTXVQTWZuelVVbHVyMlZVSWhzNkRBRGxJZ1hLN3ZTRG9HR0F0UGZwUWdrSlZkdDI2WVJ2elE4emNaNWxiOGUzWjAzcS0wdFhKeVI1a3MwenMwWklLS3VlbFVha0xyRW9wRU1heGxYVl9UVko1REJXRzktTThqUHFHcHlldUwycTIwMUlyb2NvTGZFZzBvQTg?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Multiple Pastors Claim U.S. Military Intelligence Officers Secretly Briefed Them To Prepare Their Congregations For UAP Disclosure
+            - figure [ref=e458]
+          - generic [ref=e459]:
+            - time [ref=e460]: 15 hours ago
+            - separator [ref=e461]
+            - generic [ref=e462]: By Samuel Lopez
+      - generic [ref=e463]:
+        - separator [ref=e465]
+        - generic [ref=e467]:
+          - generic [ref=e468]:
+            - link [ref=e470] [cursor=pointer]:
+              - /url: ./read/CBMiiAFBVV95cUxQSDd2a04wNEJkMFFkc3BEZmxEajJUdW9NcWRXYlBtMXk2MTAwM3pMSGFDVmx6eGZ0dDB5MVZJUmxMdzFrSE9GeUUtM2RIODR6OC1RNTQ5VHVWWm9rejU4eTdPOFAybTE2OEZXNUtuM2hodi1pU1dsSVJiMDlDTnB1S1BuRE9sS0R3?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e472]:
+              - generic [ref=e473]:
+                - generic [ref=e476]: AOL.com
+                - generic [ref=e480]:
+                  - generic:
+                    - button "More - Pentagon UFO website shatters records with 340M hits in first 12 hours" [ref=e481] [cursor=pointer]:
+                      - img [ref=e483]
+                    - tooltip [ref=e485]: More
+              - link "Pentagon UFO website shatters records with 340M hits in first 12 hours - AOL.com - 10 hours ago" [ref=e486] [cursor=pointer]:
+                - /url: ./read/CBMiiAFBVV95cUxQSDd2a04wNEJkMFFkc3BEZmxEajJUdW9NcWRXYlBtMXk2MTAwM3pMSGFDVmx6eGZ0dDB5MVZJUmxMdzFrSE9GeUUtM2RIODR6OC1RNTQ5VHVWWm9rejU4eTdPOFAybTE2OEZXNUtuM2hodi1pU1dsSVJiMDlDTnB1S1BuRE9sS0R3?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Pentagon UFO website shatters records with 340M hits in first 12 hours
+            - figure [ref=e487]
+          - time [ref=e489]: 10 hours ago
+      - generic [ref=e490]:
+        - separator [ref=e492]
+        - generic [ref=e494]:
+          - generic [ref=e495]:
+            - link [ref=e497] [cursor=pointer]:
+              - /url: ./read/CBMijwFBVV95cUxON29rc3B0cnhrLWRiN3k0T1FBQ0FKVVpTNjRRVVQ1aThxR3haVWMzVDJCNDhEV0YzMDVwR3FPVGdlUGFBcW1DaHVqTm8tbGdGM0ozTGtDSnFrSWZMLS11cWdHT2s3bDVlTW94SVU4bUxOUnAxbU9pYlJObE1JbUtjcUs1V1dPSVFWTnNaM1FVUQ?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e499]:
+              - generic [ref=e500]:
+                - generic [ref=e503]: AOL.com
+                - generic [ref=e507]:
+                  - generic:
+                    - button "More - Government withholding information on UFOs from the public, GOP rep says" [ref=e508] [cursor=pointer]:
+                      - img [ref=e510]
+                    - tooltip [ref=e512]: More
+              - link "Government withholding information on UFOs from the public, GOP rep says - AOL.com - 8 hours ago - By Joseph Wulfsohn" [ref=e513] [cursor=pointer]:
+                - /url: ./read/CBMijwFBVV95cUxON29rc3B0cnhrLWRiN3k0T1FBQ0FKVVpTNjRRVVQ1aThxR3haVWMzVDJCNDhEV0YzMDVwR3FPVGdlUGFBcW1DaHVqTm8tbGdGM0ozTGtDSnFrSWZMLS11cWdHT2s3bDVlTW94SVU4bUxOUnAxbU9pYlJObE1JbUtjcUs1V1dPSVFWTnNaM1FVUQ?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Government withholding information on UFOs from the public, GOP rep says
+            - figure [ref=e514]
+          - generic [ref=e515]:
+            - time [ref=e516]: 8 hours ago
+            - separator [ref=e517]
+            - generic [ref=e518]: By Joseph Wulfsohn
+      - generic [ref=e519]:
+        - separator [ref=e521]
+        - generic [ref=e523]:
+          - generic [ref=e524]:
+            - link [ref=e526] [cursor=pointer]:
+              - /url: ./read/CBMipAFBVV95cUxORjVrWDEzUHM5NF8zcjZDdlNZVkNvUUN6NkxHaGpVMTBYcl9Pd3lBZmpMZVJ0RnhENTh4SmNsY1VzQnNrNWVaRDlsWTQwQzgtQXdHWU43cXdqRkc4X3pVZ3NwZ0tib3hGT05pRzN5LV8tVHptZTRQb1hfRnE1TzRaSVFMNVZxd1poRXlfcTNrZXVVakpYYnhDYXRBME0yZGFMOHM5Zw?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e528]:
+              - generic [ref=e529]:
+                - generic [ref=e532]: USA Herald
+                - generic [ref=e536]:
+                  - generic:
+                    - button "More - Televangelist’s UFO Warning Goes Viral As America Waits For Disclosure And Proof" [ref=e537] [cursor=pointer]:
+                      - img [ref=e539]
+                    - tooltip [ref=e541]: More
+              - link "Televangelist’s UFO Warning Goes Viral As America Waits For Disclosure And Proof - USA Herald - 4 hours ago - By Samuel Lopez" [ref=e542] [cursor=pointer]:
+                - /url: ./read/CBMipAFBVV95cUxORjVrWDEzUHM5NF8zcjZDdlNZVkNvUUN6NkxHaGpVMTBYcl9Pd3lBZmpMZVJ0RnhENTh4SmNsY1VzQnNrNWVaRDlsWTQwQzgtQXdHWU43cXdqRkc4X3pVZ3NwZ0tib3hGT05pRzN5LV8tVHptZTRQb1hfRnE1TzRaSVFMNVZxd1poRXlfcTNrZXVVakpYYnhDYXRBME0yZGFMOHM5Zw?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Televangelist’s UFO Warning Goes Viral As America Waits For Disclosure And Proof
+            - figure [ref=e543]
+          - generic [ref=e544]:
+            - time [ref=e545]: 4 hours ago
+            - separator [ref=e546]
+            - generic [ref=e547]: By Samuel Lopez
+      - generic [ref=e548]:
+        - separator [ref=e550]
+        - generic [ref=e552]:
+          - generic [ref=e553]:
+            - link [ref=e555] [cursor=pointer]:
+              - /url: ./read/CBMinwNBVV95cUxOZnNKeUs3T0lXWnhZVEVUUkNqS1JlSFAzYWtNTV9LSGZpX05Tc1BMRlpDLThGY0tFOVAwdnAxLWp2NkpyRk1ac0VyYUwzQXd1c1JTN1FCM1JZaTFPOUNES2JhVXlEMERyY0NtbFFGeWVIZTJ4cWVuYkVfTlF6c1ZJVkExbnZsazdWTEw2RGp1dnI3OEpsYWx2UkFJNkVnZ2VuR2RWelpYZTZZX2JUZ0xTYlM5bmhVWXQ2dEN6c0lhVi03Y2ZnNHlXQnNxUm5LOXhQRVNYTk5WdjlEcnVKRWg3QWlKQlh6R3JMUGc2YjdpSEFLOWppRWNpbDVuUDdCTGpNd29fTVlIUUdlT0NqcnlCLXZlQ2M0azJCeG4za2c0Z2haaXdGUm1ZX3c1LUIwN3hLVVZnM0l2Vl9JcUxjQW1ZNGFHZjJpcVpoM2FWUDJCX05HdzFxaVpzN0lTVDlJbzlaTENMeTFTS1RPWHRTcjBKRllFOGxRc2Y5Y29zZmVib1JyX3BLbkk5RE5qSU84UkZjd2kxd2x2a1NYSkExeFIw?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e557]:
+              - generic [ref=e558]:
+                - generic [ref=e561]: KIMA
+                - generic [ref=e565]:
+                  - generic:
+                    - 'button "More - ''Terrific person'': Trump showers Tulsi Gabbard with praise days after shocking resignation" [ref=e566] [cursor=pointer]':
+                      - img [ref=e568]
+                    - tooltip [ref=e570]: More
+              - 'link "''Terrific person'': Trump showers Tulsi Gabbard with praise days after shocking resignation - KIMA - 23 hours ago" [ref=e571] [cursor=pointer]':
+                - /url: ./read/CBMinwNBVV95cUxOZnNKeUs3T0lXWnhZVEVUUkNqS1JlSFAzYWtNTV9LSGZpX05Tc1BMRlpDLThGY0tFOVAwdnAxLWp2NkpyRk1ac0VyYUwzQXd1c1JTN1FCM1JZaTFPOUNES2JhVXlEMERyY0NtbFFGeWVIZTJ4cWVuYkVfTlF6c1ZJVkExbnZsazdWTEw2RGp1dnI3OEpsYWx2UkFJNkVnZ2VuR2RWelpYZTZZX2JUZ0xTYlM5bmhVWXQ2dEN6c0lhVi03Y2ZnNHlXQnNxUm5LOXhQRVNYTk5WdjlEcnVKRWg3QWlKQlh6R3JMUGc2YjdpSEFLOWppRWNpbDVuUDdCTGpNd29fTVlIUUdlT0NqcnlCLXZlQ2M0azJCeG4za2c0Z2haaXdGUm1ZX3c1LUIwN3hLVVZnM0l2Vl9JcUxjQW1ZNGFHZjJpcVpoM2FWUDJCX05HdzFxaVpzN0lTVDlJbzlaTENMeTFTS1RPWHRTcjBKRllFOGxRc2Y5Y29zZmVib1JyX3BLbkk5RE5qSU84UkZjd2kxd2x2a1NYSkExeFIw?hl=en-US&gl=US&ceid=US%3Aen
+                - text: "'Terrific person': Trump showers Tulsi Gabbard with praise days after shocking resignation"
+            - figure [ref=e572]
+          - time [ref=e574]: 23 hours ago
+      - generic [ref=e575]:
+        - separator [ref=e577]
+        - generic [ref=e579]:
+          - generic [ref=e580]:
+            - link [ref=e582] [cursor=pointer]:
+              - /url: ./read/CBMigAFBVV95cUxNUHZQcGEzdUh2WkMtbndPcUlNV0FJWGZnWkR2bnhnVEhfUjFzbkk0OUdseTU4WlUxUHIweUVKS016QXg3M2FiTEEtLUp3N3VzMTlpQ09ORG1fcldzVTNZLWkzeGcwckJPVHcyRzF4SXl0cEtDQzQ4SS0zQWVmLURULQ?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e584]:
+              - generic [ref=e585]:
+                - generic [ref=e588]: AOL.com
+                - generic [ref=e592]:
+                  - generic:
+                    - button "More - US government releases UFO sighting reports - 'Orbs swarming in all directions'" [ref=e593] [cursor=pointer]:
+                      - img [ref=e595]
+                    - tooltip [ref=e597]: More
+              - link "US government releases UFO sighting reports - 'Orbs swarming in all directions' - AOL.com - 12 hours ago" [ref=e598] [cursor=pointer]:
+                - /url: ./read/CBMigAFBVV95cUxNUHZQcGEzdUh2WkMtbndPcUlNV0FJWGZnWkR2bnhnVEhfUjFzbkk0OUdseTU4WlUxUHIweUVKS016QXg3M2FiTEEtLUp3N3VzMTlpQ09ORG1fcldzVTNZLWkzeGcwckJPVHcyRzF4SXl0cEtDQzQ4SS0zQWVmLURULQ?hl=en-US&gl=US&ceid=US%3Aen
+                - text: US government releases UFO sighting reports - 'Orbs swarming in all directions'
+            - figure [ref=e599]
+          - time [ref=e601]: 12 hours ago
+      - generic [ref=e602]:
+        - separator [ref=e604]
+        - generic [ref=e606]:
+          - generic [ref=e607]:
+            - link [ref=e609] [cursor=pointer]:
+              - /url: ./read/CBMiigFBVV95cUxPemRvWnh4RWg5YVl4aHpmejB3bkpJVkV3TWZiVjBxY091R0xfRy05NmhYWmJSWUNyVkxsWjRFQ2RLdEUzWHkzRVJPZi1TU0xJeXlPcmlxb1BtRzNpZ1lqX2FGVkhCN3A3NWNwZUMxM0N5R0RWd2s5aGcydGt6UG5tdzNqZjlqZFRGWEE?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e611]:
+              - generic [ref=e612]:
+                - generic [ref=e615]: AOL.com
+                - generic [ref=e619]:
+                  - generic:
+                    - button "More - The UFO community has been waiting for answers. Has the Pentagon delivered?" [ref=e620] [cursor=pointer]:
+                      - img [ref=e622]
+                    - tooltip [ref=e624]: More
+              - link "The UFO community has been waiting for answers. Has the Pentagon delivered? - AOL.com - 13 hours ago - By Sheila Flynn" [ref=e625] [cursor=pointer]:
+                - /url: ./read/CBMiigFBVV95cUxPemRvWnh4RWg5YVl4aHpmejB3bkpJVkV3TWZiVjBxY091R0xfRy05NmhYWmJSWUNyVkxsWjRFQ2RLdEUzWHkzRVJPZi1TU0xJeXlPcmlxb1BtRzNpZ1lqX2FGVkhCN3A3NWNwZUMxM0N5R0RWd2s5aGcydGt6UG5tdzNqZjlqZFRGWEE?hl=en-US&gl=US&ceid=US%3Aen
+                - text: The UFO community has been waiting for answers. Has the Pentagon delivered?
+            - figure [ref=e626]
+          - generic [ref=e627]:
+            - time [ref=e628]: 13 hours ago
+            - separator [ref=e629]
+            - generic [ref=e630]: By Sheila Flynn
+      - generic [ref=e631]:
+        - separator [ref=e633]
+        - generic [ref=e635]:
+          - generic [ref=e636]:
+            - link [ref=e638] [cursor=pointer]:
+              - /url: ./read/CBMiiAFBVV95cUxPdnZBQl96cVJaTjBGVnlPLWNDaXd1dWJKWnN0d1VzMEZBNEl4dm5zSnZqT0FOWVcyVmRyeDdKdzE3TW9iVTlBeG9TcXozVldOZ28zV2tRUTk4OU1PZk5nVkRrUjhrMkdZd1VLOGdyNzdIXzdyUjZWU2lrVS04bUZyaGo2bnVvVjVa?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e640]:
+              - generic [ref=e641]:
+                - generic [ref=e644]: AOL.com
+                - generic [ref=e648]:
+                  - generic:
+                    - button "More - Pentagon declassifies Apollo 12 audio of astronauts describing unexplained 'streaks of light' in space" [ref=e649] [cursor=pointer]:
+                      - img [ref=e651]
+                    - tooltip [ref=e653]: More
+              - link "Pentagon declassifies Apollo 12 audio of astronauts describing unexplained 'streaks of light' in space - AOL.com - 5 hours ago - By Sarah Rumpf" [ref=e654] [cursor=pointer]:
+                - /url: ./read/CBMiiAFBVV95cUxPdnZBQl96cVJaTjBGVnlPLWNDaXd1dWJKWnN0d1VzMEZBNEl4dm5zSnZqT0FOWVcyVmRyeDdKdzE3TW9iVTlBeG9TcXozVldOZ28zV2tRUTk4OU1PZk5nVkRrUjhrMkdZd1VLOGdyNzdIXzdyUjZWU2lrVS04bUZyaGo2bnVvVjVa?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Pentagon declassifies Apollo 12 audio of astronauts describing unexplained 'streaks of light' in space
+            - figure [ref=e655]
+          - generic [ref=e656]:
+            - time [ref=e657]: 5 hours ago
+            - separator [ref=e658]
+            - generic [ref=e659]: By Sarah Rumpf
+      - generic [ref=e660]:
+        - separator [ref=e662]
+        - generic [ref=e664]:
+          - generic [ref=e665]:
+            - link [ref=e667] [cursor=pointer]:
+              - /url: ./read/CBMiakFVX3lxTE5CNUJpazRmS1BkQ2tsb0dENHhYV09nYloyUTRGOEhkUm9pVVFGTkdzX0RLS3hnYjBSTUh4OF92LWd0LUZ3OTlqQnpyVE1SSkZhaWRSQVNPNGZBOGVuQVU2NzFXQ2Q1SVFkSWc?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e669]:
+              - generic [ref=e670]:
+                - generic [ref=e673]: DeFi Rate
+                - generic [ref=e677]:
+                  - generic:
+                    - button "More - Live Odds on the US Confirming Aliens Exist Before 2027" [ref=e678] [cursor=pointer]:
+                      - img [ref=e680]
+                    - tooltip [ref=e682]: More
+              - link "Live Odds on the US Confirming Aliens Exist Before 2027 - DeFi Rate - 11 hours ago" [ref=e683] [cursor=pointer]:
+                - /url: ./read/CBMiakFVX3lxTE5CNUJpazRmS1BkQ2tsb0dENHhYV09nYloyUTRGOEhkUm9pVVFGTkdzX0RLS3hnYjBSTUh4OF92LWd0LUZ3OTlqQnpyVE1SSkZhaWRSQVNPNGZBOGVuQVU2NzFXQ2Q1SVFkSWc?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Live Odds on the US Confirming Aliens Exist Before 2027
+            - figure [ref=e684]
+          - time [ref=e686]: 11 hours ago
+      - generic [ref=e687]:
+        - separator [ref=e689]
+        - generic [ref=e691]:
+          - generic [ref=e692]:
+            - link [ref=e694] [cursor=pointer]:
+              - /url: ./read/CBMipAFBVV95cUxPX3A4ZTduaTM4TjFoNnQ5YWFRT0xwUGloMFp6WUVoLXd5ZXpCNWxzYTZHLVhWNzdSMkk2TmlKME1rbmFfLUNERFR1VzZEeEl4c3lWUV9WcmFsQ205cHo3UDBOVTYyYXV0UXBfTjYwWFJPSTZzdFZJMEtjYjNyM0R2VjJ6bnhxMmhFWU1uTUVMTXkxTENzMEUyVF9uWEJqUjFZbVU1U9IBqgFBVV95cUxOXzRjeG5RYlBidy0zY2s1QU5tU2JKM2Z2VklWU2xsQ3UzV3ZoSGNLcy1mR0RiR3lvMlFUdFNYekExSzdKLWN6eDZoMmFKUkgzVDNzUUx0SGVtNTZhenZYUks2aVhSZ3ZlMXhUc0pyVEstYjQ1VzhZUEwyLUVDSF9CNjBzS3JUdmZwaG1VQXJkQ3ZPVW1JU2d6bWVxT1gyUDFjX1IzZS04Q2NDZw?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e696]:
+              - generic [ref=e697]:
+                - generic [ref=e700]: The Business Standard
+                - generic [ref=e704]:
+                  - generic:
+                    - button "More - Tulsi Gabbard resigns as Trump's top US intelligence official" [ref=e705] [cursor=pointer]:
+                      - img [ref=e707]
+                    - tooltip [ref=e709]: More
+              - link "Tulsi Gabbard resigns as Trump's top US intelligence official - The Business Standard - 21 hours ago" [ref=e710] [cursor=pointer]:
+                - /url: ./read/CBMipAFBVV95cUxPX3A4ZTduaTM4TjFoNnQ5YWFRT0xwUGloMFp6WUVoLXd5ZXpCNWxzYTZHLVhWNzdSMkk2TmlKME1rbmFfLUNERFR1VzZEeEl4c3lWUV9WcmFsQ205cHo3UDBOVTYyYXV0UXBfTjYwWFJPSTZzdFZJMEtjYjNyM0R2VjJ6bnhxMmhFWU1uTUVMTXkxTENzMEUyVF9uWEJqUjFZbVU1U9IBqgFBVV95cUxOXzRjeG5RYlBidy0zY2s1QU5tU2JKM2Z2VklWU2xsQ3UzV3ZoSGNLcy1mR0RiR3lvMlFUdFNYekExSzdKLWN6eDZoMmFKUkgzVDNzUUx0SGVtNTZhenZYUks2aVhSZ3ZlMXhUc0pyVEstYjQ1VzhZUEwyLUVDSF9CNjBzS3JUdmZwaG1VQXJkQ3ZPVW1JU2d6bWVxT1gyUDFjX1IzZS04Q2NDZw?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Tulsi Gabbard resigns as Trump's top US intelligence official
+            - figure [ref=e711]
+          - time [ref=e713]: 21 hours ago
+      - generic [ref=e714]:
+        - separator [ref=e716]
+        - generic [ref=e718]:
+          - generic [ref=e719]:
+            - link [ref=e721] [cursor=pointer]:
+              - /url: ./read/CBMizAFBVV95cUxNNGRka1FpUlZuUmVUOXRFZVVmdmlWMFlpMUFueWUzbUkwLWZKcmk2cWRzX096MncyYnNScXlSYlRXY1JUaE13QWhtT25tMEJtTENheFVBTzlwZ281RWZIZEFRaUcyRGl0Yzk0VWw0ZElhVWROSzl3RklmMmZEZ19OME9IV2poWkpYUG1FVVM4ZE54TEVrUndJRVU3MURjczF0dWRlWnRJR1pKOW9ybW9peGRIaGxWMzgzdE12U09NdW9xenpxWHpwWTRpckU?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e723]:
+              - generic [ref=e724]:
+                - generic [ref=e727]: USA Herald
+                - generic [ref=e731]:
+                  - generic:
+                    - button "More - Spielberg’s ‘Disclosure Day’ Could Mark the Moment UFO Secrecy Finally Collides with Public Demand for The Truth" [ref=e732] [cursor=pointer]:
+                      - img [ref=e734]
+                    - tooltip [ref=e736]: More
+              - link "Spielberg’s ‘Disclosure Day’ Could Mark the Moment UFO Secrecy Finally Collides with Public Demand for The Truth - USA Herald - 11 hours ago - By Samuel Lopez" [ref=e737] [cursor=pointer]:
+                - /url: ./read/CBMizAFBVV95cUxNNGRka1FpUlZuUmVUOXRFZVVmdmlWMFlpMUFueWUzbUkwLWZKcmk2cWRzX096MncyYnNScXlSYlRXY1JUaE13QWhtT25tMEJtTENheFVBTzlwZ281RWZIZEFRaUcyRGl0Yzk0VWw0ZElhVWROSzl3RklmMmZEZ19OME9IV2poWkpYUG1FVVM4ZE54TEVrUndJRVU3MURjczF0dWRlWnRJR1pKOW9ybW9peGRIaGxWMzgzdE12U09NdW9xenpxWHpwWTRpckU?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Spielberg’s ‘Disclosure Day’ Could Mark the Moment UFO Secrecy Finally Collides with Public Demand for The Truth
+            - figure [ref=e738]
+          - generic [ref=e739]:
+            - time [ref=e740]: 11 hours ago
+            - separator [ref=e741]
+            - generic [ref=e742]: By Samuel Lopez
+      - generic [ref=e743]:
+        - separator [ref=e745]
+        - generic [ref=e747]:
+          - generic [ref=e748]:
+            - link [ref=e750] [cursor=pointer]:
+              - /url: ./read/CBMid0FVX3lxTFBGeXJBZGY4QzREN1RnUVV5eWdIbGtSWUFRbHRqcElQVEVXTGY5ZF9WY1M0YjJxUmRPU1BLTjN2cGM4VXdVNElralR3Z0I5SDJFZjZoZXlGbTF2X1NQSU5VcmxsSFFUa2ltMVlwaDFWeFlZaWtLMHJn?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e752]:
+              - generic [ref=e753]:
+                - generic [ref=e756]: AOL.com
+                - generic [ref=e760]:
+                  - generic:
+                    - button "More - UFO insider claims US has bodies of 4 different alien species from downed spacecraft in government custody" [ref=e761] [cursor=pointer]:
+                      - img [ref=e763]
+                    - tooltip [ref=e765]: More
+              - link "UFO insider claims US has bodies of 4 different alien species from downed spacecraft in government custody - AOL.com - 18 hours ago - By Julia Bonavita" [ref=e766] [cursor=pointer]:
+                - /url: ./read/CBMid0FVX3lxTFBGeXJBZGY4QzREN1RnUVV5eWdIbGtSWUFRbHRqcElQVEVXTGY5ZF9WY1M0YjJxUmRPU1BLTjN2cGM4VXdVNElralR3Z0I5SDJFZjZoZXlGbTF2X1NQSU5VcmxsSFFUa2ltMVlwaDFWeFlZaWtLMHJn?hl=en-US&gl=US&ceid=US%3Aen
+                - text: UFO insider claims US has bodies of 4 different alien species from downed spacecraft in government custody
+            - figure [ref=e767]
+          - generic [ref=e768]:
+            - time [ref=e769]: 18 hours ago
+            - separator [ref=e770]
+            - generic [ref=e771]: By Julia Bonavita
+      - generic [ref=e772]:
+        - separator [ref=e774]
+        - generic [ref=e776]:
+          - generic [ref=e777]:
+            - link [ref=e779] [cursor=pointer]:
+              - /url: ./read/CBMiW0FVX3lxTFBNc3VudjlYZ0htUkJmdFZuZjJtNTM4dHI1RWdyRVk0eXBHMkZoLXhLVENRbVA5NURueGdUX3hYOURjUlAwYkdYZzhMYWlZd3JmTFR1OHJvVU96VHc?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e781]:
+              - generic [ref=e782]:
+                - generic [ref=e785]: Mshale
+                - generic [ref=e789]:
+                  - generic:
+                    - 'button "More - WATCH: Every Single UFO Video Just Released By The Pentagon & DOW April Jobs Report (8LA3zACQOl)" [ref=e790] [cursor=pointer]':
+                      - img [ref=e792]
+                    - tooltip [ref=e794]: More
+              - 'link "WATCH: Every Single UFO Video Just Released By The Pentagon & DOW April Jobs Report (8LA3zACQOl) - Mshale - 22 hours ago - By Tom Gitaa" [ref=e795] [cursor=pointer]':
+                - /url: ./read/CBMiW0FVX3lxTFBNc3VudjlYZ0htUkJmdFZuZjJtNTM4dHI1RWdyRVk0eXBHMkZoLXhLVENRbVA5NURueGdUX3hYOURjUlAwYkdYZzhMYWlZd3JmTFR1OHJvVU96VHc?hl=en-US&gl=US&ceid=US%3Aen
+                - text: "WATCH: Every Single UFO Video Just Released By The Pentagon & DOW April Jobs Report (8LA3zACQOl)"
+            - figure [ref=e796]
+          - generic [ref=e797]:
+            - time [ref=e798]: 22 hours ago
+            - separator [ref=e799]
+            - generic [ref=e800]: By Tom Gitaa
+      - generic [ref=e801]:
+        - separator [ref=e803]
+        - generic [ref=e805]:
+          - generic [ref=e806]:
+            - link [ref=e808] [cursor=pointer]:
+              - /url: ./read/CBMiYEFVX3lxTFBXa2N2aTg3RkRUSHJPcXpEZVdoS1BBOUhiSkgwVnhIVEZEQklNQ0V1cGpHeHNqbzdfdTNPWFBIUnI1b0VrZkl1T2VERFF1VGMwU2VxNGdlNV9ycFNHY0tpU9IBXEFVX3lxTFBiUXgzYnZrUlBJRm9YUlpvTEs5WEpoYWxMeXg1b09rSldmVkktYkVOX2dFb3l5dFBrOGhVVVVQc1hrTW5sRlFEcVFGNXRLcUNqTVBmbm9WOGtHelBC?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e810]:
+              - generic [ref=e811]:
+                - generic [ref=e814]: Modern Ghana
+                - generic [ref=e818]:
+                  - generic:
+                    - 'button "More - Aliens ARE out there: Neil deGrasse Tyson on NEW Trump UFO Files & Colbert''s NEXT ACT!" [ref=e819] [cursor=pointer]':
+                      - img [ref=e821]
+                    - tooltip [ref=e823]: More
+              - 'link "Aliens ARE out there: Neil deGrasse Tyson on NEW Trump UFO Files & Colbert''s NEXT ACT! - Modern Ghana - 23 hours ago" [ref=e824] [cursor=pointer]':
+                - /url: ./read/CBMiYEFVX3lxTFBXa2N2aTg3RkRUSHJPcXpEZVdoS1BBOUhiSkgwVnhIVEZEQklNQ0V1cGpHeHNqbzdfdTNPWFBIUnI1b0VrZkl1T2VERFF1VGMwU2VxNGdlNV9ycFNHY0tpU9IBXEFVX3lxTFBiUXgzYnZrUlBJRm9YUlpvTEs5WEpoYWxMeXg1b09rSldmVkktYkVOX2dFb3l5dFBrOGhVVVVQc1hrTW5sRlFEcVFGNXRLcUNqTVBmbm9WOGtHelBC?hl=en-US&gl=US&ceid=US%3Aen
+                - text: "Aliens ARE out there: Neil deGrasse Tyson on NEW Trump UFO Files & Colbert's NEXT ACT!"
+            - figure [ref=e825]
+          - time [ref=e827]: 23 hours ago
+      - generic [ref=e828]:
+        - separator [ref=e830]
+        - generic [ref=e832]:
+          - generic [ref=e833]:
+            - link [ref=e835] [cursor=pointer]:
+              - /url: ./read/CBMif0FVX3lxTE04dXJvMHRYWlVRMWNiUC1maHRvWk1wVGVpSFZqVXBlMUpmcW1xU09zRXZHaFBTSV9jaGNKWW51TTY2RUVvY3JTbTBjdklZN0FzN0xYZGQ5R2xhR0x5NFBkdXRqeFk2TTZkZEowZ0pIZXRrX3JrSnFsUkthOVRRWFU?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e837]:
+              - generic [ref=e838]:
+                - generic [ref=e841]: AOL.com
+                - generic [ref=e845]:
+                  - generic:
+                    - button "More - Pentagon releases latest batch of UFO files and videos including intelligence officer who saw ‘orbs’" [ref=e846] [cursor=pointer]:
+                      - img [ref=e848]
+                    - tooltip [ref=e850]: More
+              - link "Pentagon releases latest batch of UFO files and videos including intelligence officer who saw ‘orbs’ - AOL.com - 12 hours ago - By Katie Hawkinson" [ref=e851] [cursor=pointer]:
+                - /url: ./read/CBMif0FVX3lxTE04dXJvMHRYWlVRMWNiUC1maHRvWk1wVGVpSFZqVXBlMUpmcW1xU09zRXZHaFBTSV9jaGNKWW51TTY2RUVvY3JTbTBjdklZN0FzN0xYZGQ5R2xhR0x5NFBkdXRqeFk2TTZkZEowZ0pIZXRrX3JrSnFsUkthOVRRWFU?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Pentagon releases latest batch of UFO files and videos including intelligence officer who saw ‘orbs’
+            - figure [ref=e852]
+          - generic [ref=e853]:
+            - time [ref=e854]: 12 hours ago
+            - separator [ref=e855]
+            - generic [ref=e856]: By Katie Hawkinson
+      - generic [ref=e857]:
+        - separator [ref=e859]
+        - generic [ref=e861]:
+          - generic [ref=e862]:
+            - link [ref=e864] [cursor=pointer]:
+              - /url: ./read/CBMickFVX3lxTE9HZGZXU01aNTBjTkY4YlJiM0h2OGdPT21lUnRFWjBIbWtfT0lWQlNib2dNcFdzSVJHTEg3VFZNN1kwY1d3dGVkd1pBWk01WEtRWEREdGpZQlBXXzN1cVZsbm11N2kxZFpfWnB4U1hTQUFBQQ?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e866]:
+              - generic [ref=e867]:
+                - generic [ref=e870]: AOL.com
+                - generic [ref=e874]:
+                  - generic:
+                    - button "More - UFO shot down by US Air Force in chilling video from second FBI files drop" [ref=e875] [cursor=pointer]:
+                      - img [ref=e877]
+                    - tooltip [ref=e879]: More
+              - link "UFO shot down by US Air Force in chilling video from second FBI files drop - AOL.com - 13 hours ago" [ref=e880] [cursor=pointer]:
+                - /url: ./read/CBMickFVX3lxTE9HZGZXU01aNTBjTkY4YlJiM0h2OGdPT21lUnRFWjBIbWtfT0lWQlNib2dNcFdzSVJHTEg3VFZNN1kwY1d3dGVkd1pBWk01WEtRWEREdGpZQlBXXzN1cVZsbm11N2kxZFpfWnB4U1hTQUFBQQ?hl=en-US&gl=US&ceid=US%3Aen
+                - text: UFO shot down by US Air Force in chilling video from second FBI files drop
+            - figure [ref=e881]
+          - time [ref=e883]: 13 hours ago
+      - generic [ref=e884]:
+        - separator [ref=e886]
+        - generic [ref=e888]:
+          - generic [ref=e889]:
+            - link [ref=e891] [cursor=pointer]:
+              - /url: ./read/CBMif0FVX3lxTE51SzAwdmNPcVFnOG9QSWpFNWRMc1FScmJYNzNCYlJra0hUZ3N1czMtczV3OVF5T0FpSWxRM3pSaWRyOWg5QnZKalROUzZNLTRuT0Y4eFFzZkgwR001YS1kNWt3N2k5LWpWaHRnRUtkd1RPU2ZnRzJsLXVlVDNkV28?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e893]:
+              - generic [ref=e894]:
+                - generic [ref=e897]: AOL.com
+                - generic [ref=e901]:
+                  - generic:
+                    - button "More - Former CIA Scientist Claims the US Government Knows of 'Four Species of Aliens' — After Trump Ordered UFO Files Be Released to the Public" [ref=e902] [cursor=pointer]:
+                      - img [ref=e904]
+                    - tooltip [ref=e906]: More
+              - link "Former CIA Scientist Claims the US Government Knows of 'Four Species of Aliens' — After Trump Ordered UFO Files Be Released to the Public - AOL.com - 22 hours ago - By Bryan Brunati" [ref=e907] [cursor=pointer]:
+                - /url: ./read/CBMif0FVX3lxTE51SzAwdmNPcVFnOG9QSWpFNWRMc1FScmJYNzNCYlJra0hUZ3N1czMtczV3OVF5T0FpSWxRM3pSaWRyOWg5QnZKalROUzZNLTRuT0Y4eFFzZkgwR001YS1kNWt3N2k5LWpWaHRnRUtkd1RPU2ZnRzJsLXVlVDNkV28?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Former CIA Scientist Claims the US Government Knows of 'Four Species of Aliens' — After Trump Ordered UFO Files Be Released to the Public
+            - figure [ref=e908]
+          - generic [ref=e909]:
+            - time [ref=e910]: 22 hours ago
+            - separator [ref=e911]
+            - generic [ref=e912]: By Bryan Brunati
+      - generic [ref=e913]:
+        - separator [ref=e915]
+        - generic [ref=e917]:
+          - generic [ref=e918]:
+            - link [ref=e920] [cursor=pointer]:
+              - /url: ./read/CBMiWkFVX3lxTE1pYWlBOU9LaUE5WkhsdmNaOGFxOEVoR2dmaWxITTNKU0s5N2pmcjk4QWFYR2RmOG9SY1l3Qjhra1VTZEpjMU9rcGRRd3ZqNzNVWU9TVmdHMDlSQQ?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e922]:
+              - generic [ref=e923]:
+                - generic [ref=e926]: BBC
+                - generic [ref=e930]:
+                  - generic:
+                    - 'button "More - Watch: We analysed thousands of Trump’s posts - here’s what we found" [ref=e931] [cursor=pointer]':
+                      - img [ref=e933]
+                    - tooltip [ref=e935]: More
+              - 'link "Watch: We analysed thousands of Trump’s posts - here’s what we found - BBC - 23 hours ago" [ref=e936] [cursor=pointer]':
+                - /url: ./read/CBMiWkFVX3lxTE1pYWlBOU9LaUE5WkhsdmNaOGFxOEVoR2dmaWxITTNKU0s5N2pmcjk4QWFYR2RmOG9SY1l3Qjhra1VTZEpjMU9rcGRRd3ZqNzNVWU9TVmdHMDlSQQ?hl=en-US&gl=US&ceid=US%3Aen
+                - text: "Watch: We analysed thousands of Trump’s posts - here’s what we found"
+            - figure [ref=e937]
+          - time [ref=e939]: 23 hours ago
+      - generic [ref=e940]:
+        - separator [ref=e942]
+        - generic [ref=e944]:
+          - generic [ref=e945]:
+            - link [ref=e947] [cursor=pointer]:
+              - /url: ./read/CBMiekFVX3lxTE9rNmQ0eGdIbkNaQXowbk4xS0hjQ25GQkZlWGZWNkM5dWVJVFhxTmE2U0lLdGNPZzczei0wTTh1TGtkV2JKZHBSM0hoZ2NhaXE1bkJtQVJZTnUtcDlpcmdTVVlVc0pUa0JNM2RxMHpNb1Z4TjlNem1CaHJR?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e949]:
+              - generic [ref=e950]:
+                - generic [ref=e953]: AOL.com
+                - generic [ref=e957]:
+                  - generic:
+                    - button "More - Bright Orb Seemingly Takes Off Like Rocket In New UFO Dump" [ref=e958] [cursor=pointer]:
+                      - img [ref=e960]
+                    - tooltip [ref=e962]: More
+              - link "Bright Orb Seemingly Takes Off Like Rocket In New UFO Dump - AOL.com - 21 hours ago - By Mark Tanos" [ref=e963] [cursor=pointer]:
+                - /url: ./read/CBMiekFVX3lxTE9rNmQ0eGdIbkNaQXowbk4xS0hjQ25GQkZlWGZWNkM5dWVJVFhxTmE2U0lLdGNPZzczei0wTTh1TGtkV2JKZHBSM0hoZ2NhaXE1bkJtQVJZTnUtcDlpcmdTVVlVc0pUa0JNM2RxMHpNb1Z4TjlNem1CaHJR?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Bright Orb Seemingly Takes Off Like Rocket In New UFO Dump
+            - figure [ref=e964]
+          - generic [ref=e965]:
+            - time [ref=e966]: 21 hours ago
+            - separator [ref=e967]
+            - generic [ref=e968]: By Mark Tanos
+      - generic [ref=e969]:
+        - separator [ref=e971]
+        - generic [ref=e973]:
+          - generic [ref=e974]:
+            - link [ref=e976] [cursor=pointer]:
+              - /url: ./read/CBMifEFVX3lxTE40eDc3VUU4Tnh3VmVydEZ3WUZBY2xmSmo0WEpPbUJ3WUZ5MnYyTTZYbmIwdUh2U2dMbjZsOFU3al9RWm1YTkp3aUpLVmctWXR2d1J5ZnpVblVpdzhKT1hJYzNyQnVlNGRjUnNpdk9wTWU2M0czekdsd2tPSlU?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e978]:
+              - generic [ref=e979]:
+                - generic [ref=e982]: AOL.com
+                - generic [ref=e986]:
+                  - generic:
+                    - button "More - Apollo 12 Crew Claims Seeing ‘Streaks Of Lights’ In Eyes, New UFO File Dump Says" [ref=e987] [cursor=pointer]:
+                      - img [ref=e989]
+                    - tooltip [ref=e991]: More
+              - link "Apollo 12 Crew Claims Seeing ‘Streaks Of Lights’ In Eyes, New UFO File Dump Says - AOL.com - 21 hours ago - By Mark Tanos" [ref=e992] [cursor=pointer]:
+                - /url: ./read/CBMifEFVX3lxTE40eDc3VUU4Tnh3VmVydEZ3WUZBY2xmSmo0WEpPbUJ3WUZ5MnYyTTZYbmIwdUh2U2dMbjZsOFU3al9RWm1YTkp3aUpLVmctWXR2d1J5ZnpVblVpdzhKT1hJYzNyQnVlNGRjUnNpdk9wTWU2M0czekdsd2tPSlU?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Apollo 12 Crew Claims Seeing ‘Streaks Of Lights’ In Eyes, New UFO File Dump Says
+            - figure [ref=e993]
+          - generic [ref=e994]:
+            - time [ref=e995]: 21 hours ago
+            - separator [ref=e996]
+            - generic [ref=e997]: By Mark Tanos
+      - generic [ref=e998]:
+        - separator [ref=e1000]
+        - generic [ref=e1002]:
+          - generic [ref=e1003]:
+            - link [ref=e1005] [cursor=pointer]:
+              - /url: ./read/CBMitAFBVV95cUxQdllMbkhBQjB5WlZYT3hFUWJMeElGRWphVlVaZ2V0Q1ljUlBITjhiMmpyY1lVUHZJMEVWWTdheFBBZ3lFcG9DTTRrSUtfNGxhdXdaWDM2bE5QWHhwWkRpbkFqcy1zOUFGR0d2VFVYbFVDV29FdlRXclFQOEFBUThfZXBIczRKQlRBaGFOYzF6YWNyeWJBZHNocHdHMGU0emJNc0RRcFJpbWNxa1doMDh4VFdBUjc?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e1007]:
+              - generic [ref=e1008]:
+                - generic [ref=e1011]: inkl
+                - generic [ref=e1015]:
+                  - generic:
+                    - button "More - Can Aliens Travel To Earth? Here's Why Physics Makes Interstellar Flight Nearly Impossible" [ref=e1016] [cursor=pointer]:
+                      - img [ref=e1018]
+                    - tooltip [ref=e1020]: More
+              - link "Can Aliens Travel To Earth? Here's Why Physics Makes Interstellar Flight Nearly Impossible - inkl - 10 hours ago" [ref=e1021] [cursor=pointer]:
+                - /url: ./read/CBMitAFBVV95cUxQdllMbkhBQjB5WlZYT3hFUWJMeElGRWphVlVaZ2V0Q1ljUlBITjhiMmpyY1lVUHZJMEVWWTdheFBBZ3lFcG9DTTRrSUtfNGxhdXdaWDM2bE5QWHhwWkRpbkFqcy1zOUFGR0d2VFVYbFVDV29FdlRXclFQOEFBUThfZXBIczRKQlRBaGFOYzF6YWNyeWJBZHNocHdHMGU0emJNc0RRcFJpbWNxa1doMDh4VFdBUjc?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Can Aliens Travel To Earth? Here's Why Physics Makes Interstellar Flight Nearly Impossible
+            - figure [ref=e1022]
+          - time [ref=e1024]: 10 hours ago
+      - generic [ref=e1025]:
+        - separator [ref=e1027]
+        - generic [ref=e1029]:
+          - generic [ref=e1030]:
+            - link [ref=e1032] [cursor=pointer]:
+              - /url: ./read/CBMi4wFBVV95cUxQTjFxYXhPM0Z6cm8ydllfRzBHQmRYRV9FNVdZWDJGRFFVMksya1VWZU10NFIzQ0xCa0h1ZFpjU0tEZl92emFKWWU5bWxoMk9fU2RIVEtSbUEwSHMyNko5cVhfNlBHcDZGazZrMzk0R0dKTmk5RTNfaElRTHdJWDgyenNGd2NIMURwV1FfNDJqUFVXWmpZRDRBaE1aTkY3eFl1VVZRbFl2YWotTnhlRzBtLUUzaDdXLWo0SXQ3dWFkaWp2XzF6eDBDZTFyS0EzUF81ZmZVTnRkM0JxUnYwLW9XRnlKMNIB6AFBVV95cUxNTVZvanYxdFRHUTBDT3ZqemtCOHBpSFEyeGEzTl9RWTFucGJFMG5yZC1xdVFpbUkxUXJxbjN6QUpUcVdHbEhQWDdYbDRtQWN6WkhRSHdHenJRa1hQVWVkSGE1dEZPd0tZenpocVBnYU04bG1JSlU2cWtpYnltNzU5VHI5UkJvSjZsQUgxRWFMSFlBaS0wRFFWM0MzTzc5RWY1ZUlXYWFwVk80bnQ5RGQ4X1dkRWE3bzR0ek9kdmdFT25Rd29wYldTVDhhWFpBQjZFSnRfMnJwVXdaU2NVdXhmNXdXMktBNVo5?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e1034]:
+              - generic [ref=e1035]:
+                - generic [ref=e1038]: Times Now
+                - generic [ref=e1042]:
+                  - generic:
+                    - 'button "More - ''Aliens Walk Among Us'': Trump White House Launches UFO-Style Immigration Tracker Website" [ref=e1043] [cursor=pointer]':
+                      - img [ref=e1045]
+                    - tooltip [ref=e1047]: More
+              - 'link "''Aliens Walk Among Us'': Trump White House Launches UFO-Style Immigration Tracker Website - Times Now - 34 minutes ago" [ref=e1048] [cursor=pointer]':
+                - /url: ./read/CBMi4wFBVV95cUxQTjFxYXhPM0Z6cm8ydllfRzBHQmRYRV9FNVdZWDJGRFFVMksya1VWZU10NFIzQ0xCa0h1ZFpjU0tEZl92emFKWWU5bWxoMk9fU2RIVEtSbUEwSHMyNko5cVhfNlBHcDZGazZrMzk0R0dKTmk5RTNfaElRTHdJWDgyenNGd2NIMURwV1FfNDJqUFVXWmpZRDRBaE1aTkY3eFl1VVZRbFl2YWotTnhlRzBtLUUzaDdXLWo0SXQ3dWFkaWp2XzF6eDBDZTFyS0EzUF81ZmZVTnRkM0JxUnYwLW9XRnlKMNIB6AFBVV95cUxNTVZvanYxdFRHUTBDT3ZqemtCOHBpSFEyeGEzTl9RWTFucGJFMG5yZC1xdVFpbUkxUXJxbjN6QUpUcVdHbEhQWDdYbDRtQWN6WkhRSHdHenJRa1hQVWVkSGE1dEZPd0tZenpocVBnYU04bG1JSlU2cWtpYnltNzU5VHI5UkJvSjZsQUgxRWFMSFlBaS0wRFFWM0MzTzc5RWY1ZUlXYWFwVk80bnQ5RGQ4X1dkRWE3bzR0ek9kdmdFT25Rd29wYldTVDhhWFpBQjZFSnRfMnJwVXdaU2NVdXhmNXdXMktBNVo5?hl=en-US&gl=US&ceid=US%3Aen
+                - text: "'Aliens Walk Among Us': Trump White House Launches UFO-Style Immigration Tracker Website"
+            - figure [ref=e1049]
+          - time [ref=e1051]: 34 minutes ago
+      - generic [ref=e1052]:
+        - separator [ref=e1054]
+        - generic [ref=e1056]:
+          - generic [ref=e1057]:
+            - link [ref=e1059] [cursor=pointer]:
+              - /url: ./read/CBMifEFVX3lxTE5sWlRiclc4LW1WeW1MSmVRZUVHZ01kNTA2RTlCMjhBRkZrczRsYzJhd3VLU0szN29rRnZyNEZKWHhMZXNfNmtFZmhBellUM0tObUpPOGVyRkxURmgzUlByUEs3SU0xZDYxYjN4dmFtcWZacmhWNmk1MUNRSUI?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e1061]:
+              - generic [ref=e1062]:
+                - generic [ref=e1065]: HarianBasis.co
+                - generic [ref=e1069]:
+                  - generic:
+                    - button "More - Trump Administration Launches Immigration Tracker Website Aliens.gov" [ref=e1070] [cursor=pointer]:
+                      - img [ref=e1072]
+                    - tooltip [ref=e1074]: More
+              - link "Trump Administration Launches Immigration Tracker Website Aliens.gov - HarianBasis.co - 1 hour ago" [ref=e1075] [cursor=pointer]:
+                - /url: ./read/CBMifEFVX3lxTE5sWlRiclc4LW1WeW1MSmVRZUVHZ01kNTA2RTlCMjhBRkZrczRsYzJhd3VLU0szN29rRnZyNEZKWHhMZXNfNmtFZmhBellUM0tObUpPOGVyRkxURmgzUlByUEs3SU0xZDYxYjN4dmFtcWZacmhWNmk1MUNRSUI?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Trump Administration Launches Immigration Tracker Website Aliens.gov
+            - figure [ref=e1076]
+          - time [ref=e1078]: 1 hour ago
+      - generic [ref=e1079]:
+        - separator [ref=e1081]
+        - generic [ref=e1083]:
+          - generic [ref=e1084]:
+            - link [ref=e1086] [cursor=pointer]:
+              - /url: ./read/CBMi3wJBVV95cUxPc2NTODFoMmRuak9HNDZOTFFnUzlSZkhLU3pvQmtOdGJEWDlqYVM0VEw3ZHJHRmRTSGNHMExxN1pKMVFCNlZ2bHJKbi10bGVxNkhzMkJobktsQ2Uyc1dlTUw1VWw3bWFmRG85cHA2MkF2VTZ0Q1ptSG02VWEwSG96eFBnMWN6SjhwN3VnRXFHMFF6c0w0MWVJcUh0S2U0RUhkRnZzYVJtUzhsblhodGFuOFJRQk1iOTlzZ1B4YVZHRTZwdmJjbDRCak9TRmNNVVBMVjNTdk9RS1NfYXRLcmxOeENUTlRiRUcxZkZCSERkSnItclp2TFR0eUI2eXRDaU1xZVdlWXRaemxiN1hzRjMwSllDSjN2SnAzb1lnYmNYVzVmRGpUc2l1SVZSY19jRnJpbmJkWk43MWlmYnNIRlRWdmNNRzRsQWVRVjZZd2NSYzZaZm1hcnVVb3VGMW0yMHc?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e1088]:
+              - generic [ref=e1089]:
+                - generic [ref=e1092]: MSN
+                - generic [ref=e1096]:
+                  - generic:
+                    - button "More - Starmer should 'do a Trump' and release Britain’s X-Files, top UFO researcher says" [ref=e1097] [cursor=pointer]:
+                      - img [ref=e1099]
+                    - tooltip [ref=e1101]: More
+              - link "Starmer should 'do a Trump' and release Britain’s X-Files, top UFO researcher says - MSN - 11 hours ago - By Jerry Lawton" [ref=e1102] [cursor=pointer]:
+                - /url: ./read/CBMi3wJBVV95cUxPc2NTODFoMmRuak9HNDZOTFFnUzlSZkhLU3pvQmtOdGJEWDlqYVM0VEw3ZHJHRmRTSGNHMExxN1pKMVFCNlZ2bHJKbi10bGVxNkhzMkJobktsQ2Uyc1dlTUw1VWw3bWFmRG85cHA2MkF2VTZ0Q1ptSG02VWEwSG96eFBnMWN6SjhwN3VnRXFHMFF6c0w0MWVJcUh0S2U0RUhkRnZzYVJtUzhsblhodGFuOFJRQk1iOTlzZ1B4YVZHRTZwdmJjbDRCak9TRmNNVVBMVjNTdk9RS1NfYXRLcmxOeENUTlRiRUcxZkZCSERkSnItclp2TFR0eUI2eXRDaU1xZVdlWXRaemxiN1hzRjMwSllDSjN2SnAzb1lnYmNYVzVmRGpUc2l1SVZSY19jRnJpbmJkWk43MWlmYnNIRlRWdmNNRzRsQWVRVjZZd2NSYzZaZm1hcnVVb3VGMW0yMHc?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Starmer should 'do a Trump' and release Britain’s X-Files, top UFO researcher says
+            - figure [ref=e1103]
+          - generic [ref=e1104]:
+            - time [ref=e1105]: 11 hours ago
+            - separator [ref=e1106]
+            - generic [ref=e1107]: By Jerry Lawton
+      - generic [ref=e1108]:
+        - separator [ref=e1110]
+        - generic [ref=e1112]:
+          - generic [ref=e1113]:
+            - link [ref=e1115] [cursor=pointer]:
+              - /url: ./read/CBMibkFVX3lxTE5XdUFZTWVVM3BWVVhiaWh1a2xHcl80cnFHc1lMSVV5S2RZRWlQT25udE9uNkg1ZGU3SGw2UDBON2pwdWlxMjZkRWtPMmNzNHE5Z0txYk9XMTVmR29wWkxMdzRRM1M4WDdFdzRONWJB?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e1117]:
+              - generic [ref=e1118]:
+                - generic [ref=e1121]: International Business Times UK
+                - generic [ref=e1125]:
+                  - generic:
+                    - button "More - The Vatican Weighs In on UFO Discussion as UAP Disclosure Debate Continues to Escalate" [ref=e1126] [cursor=pointer]:
+                      - img [ref=e1128]
+                    - tooltip [ref=e1130]: More
+              - link "The Vatican Weighs In on UFO Discussion as UAP Disclosure Debate Continues to Escalate - International Business Times UK - 15 hours ago" [ref=e1131] [cursor=pointer]:
+                - /url: ./read/CBMibkFVX3lxTE5XdUFZTWVVM3BWVVhiaWh1a2xHcl80cnFHc1lMSVV5S2RZRWlQT25udE9uNkg1ZGU3SGw2UDBON2pwdWlxMjZkRWtPMmNzNHE5Z0txYk9XMTVmR29wWkxMdzRRM1M4WDdFdzRONWJB?hl=en-US&gl=US&ceid=US%3Aen
+                - text: The Vatican Weighs In on UFO Discussion as UAP Disclosure Debate Continues to Escalate
+            - figure [ref=e1132]
+          - time [ref=e1134]: 15 hours ago
+      - generic [ref=e1135]:
+        - separator [ref=e1137]
+        - generic [ref=e1139]:
+          - generic [ref=e1140]:
+            - link [ref=e1142] [cursor=pointer]:
+              - /url: ./read/CBMiT0FVX3lxTFB5enlDVmNFNXdURjZkQUdhNW5VdGRqc0U5NUlEVVdwbTQzY0FhaUFNZEh4RFgzb1Q1dWZLLU5PRi1qYzFIYTBUWkdzdjdjZjA?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e1144]:
+              - generic [ref=e1145]:
+                - generic [ref=e1148]: Alternet
+                - generic [ref=e1152]:
+                  - generic:
+                    - button "More - MAGA cries 'aliens' as White House teases another vague post" [ref=e1153] [cursor=pointer]:
+                      - img [ref=e1155]
+                    - tooltip [ref=e1157]: More
+              - link "MAGA cries 'aliens' as White House teases another vague post - Alternet - 1 hour ago" [ref=e1158] [cursor=pointer]:
+                - /url: ./read/CBMiT0FVX3lxTFB5enlDVmNFNXdURjZkQUdhNW5VdGRqc0U5NUlEVVdwbTQzY0FhaUFNZEh4RFgzb1Q1dWZLLU5PRi1qYzFIYTBUWkdzdjdjZjA?hl=en-US&gl=US&ceid=US%3Aen
+                - text: MAGA cries 'aliens' as White House teases another vague post
+            - figure [ref=e1159]
+          - time [ref=e1161]: 1 hour ago
+      - generic [ref=e1162]:
+        - separator [ref=e1164]
+        - generic [ref=e1166]:
+          - generic [ref=e1167]:
+            - link [ref=e1169] [cursor=pointer]:
+              - /url: ./read/CBMi3wFBVV95cUxPNzZGdjRQMmdWMWp5eEQwZkxidmFCdzdNRzh2Qk4tTnVMT1hIZDlNMWw2RHhoYjFNU29tMFpoR2kzT1R0RHhJUGl1cU9qVDhfOGdNdEtrTFBJeW5jbUQzZk10UWxPdFJyRG44enJuejdnTzhxWVZNRFRBUGkwU1U2YW5WQS1nUDBJMVFXSE1FWUI5VkwyejNybWxWUzZrT05CcTJBNzZ4cy1tUERVTTNEdE1JMUg5WW42QUlDbHBuWm44Q2NRWmdjcG82NklWOUtvcURsUTNNWHhuQXBHc2FB?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e1171]:
+              - generic [ref=e1172]:
+                - generic [ref=e1175]: MSN
+                - generic [ref=e1179]:
+                  - generic:
+                    - button "More - Missing Air Force general was a key witness in exposing secret UFO programs, whistleblower reveals" [ref=e1180] [cursor=pointer]:
+                      - img [ref=e1182]
+                    - tooltip [ref=e1184]: More
+              - link "Missing Air Force general was a key witness in exposing secret UFO programs, whistleblower reveals - MSN - 19 hours ago - By Chris Melore" [ref=e1185] [cursor=pointer]:
+                - /url: ./read/CBMi3wFBVV95cUxPNzZGdjRQMmdWMWp5eEQwZkxidmFCdzdNRzh2Qk4tTnVMT1hIZDlNMWw2RHhoYjFNU29tMFpoR2kzT1R0RHhJUGl1cU9qVDhfOGdNdEtrTFBJeW5jbUQzZk10UWxPdFJyRG44enJuejdnTzhxWVZNRFRBUGkwU1U2YW5WQS1nUDBJMVFXSE1FWUI5VkwyejNybWxWUzZrT05CcTJBNzZ4cy1tUERVTTNEdE1JMUg5WW42QUlDbHBuWm44Q2NRWmdjcG82NklWOUtvcURsUTNNWHhuQXBHc2FB?hl=en-US&gl=US&ceid=US%3Aen
+                - text: Missing Air Force general was a key witness in exposing secret UFO programs, whistleblower reveals
+            - figure [ref=e1186]
+          - generic [ref=e1187]:
+            - time [ref=e1188]: 19 hours ago
+            - separator [ref=e1189]
+            - generic [ref=e1190]: By Chris Melore
+      - generic [ref=e1191]:
+        - separator [ref=e1193]
+        - generic [ref=e1195]:
+          - generic [ref=e1196]:
+            - link [ref=e1198] [cursor=pointer]:
+              - /url: ./read/CBMirwNBVV95cUxPMndyZ2stQkJDRXdKcU00dV9hZ0RCVzlmdlZrdlk2Z2xTU3gySDQ5WUx3c3ZUVEQwTkVyTWw1N1owSXVENGdzb3ZwWjROMzl4Q0E4SDFKMEFlUDBKSmhkQXd0N3pBN18ycHVTV3JQc0k4TEIxT2N5cGo2dUtTMHlIZmhwM1JNR0RYUUZuaXFnNkExUExRSWJYaG5tUWg0R2NkN1Y1TWo1bTdkVldwWThQTzlrNVp4VnZnQjB0dTJVWGNzbGZvcGJobkZYR1ZsMFl3VDJQTS0zZ1JQZzNPdW9vb2poS2FvZEtkWGd5TkNQQUxkR3RETktaNDVoWm9YaThTZFpmQ2NxSXUzcld6alJfLUNOWFZrUm5HRHRCclN5Z044czQ5QWpZVkhGeDBFMjQxVWJ0VWZxMjZaRHFac0ZyNkRJVDh6a3FVUXB3VDV5cmRsSGVCNUR3MXdfWVVYNUhUNlhwUUpIdHpZLVZmNW1SWndEZG9UQkx4aUZfNUNsRmdKcnhqRUpaNWJqQUJ4dldBalVQV0RvYzVVakxSd2c2T0ZkU3g5V19RNGJrMGRJZw?hl=en-US&gl=US&ceid=US%3Aen
+            - generic [ref=e1200]:
+              - generic [ref=e1201]:
+                - generic [ref=e1204]: MSN
+                - generic [ref=e1208]:
+                  - generic:
+                    - 'button "More - ''So alien to our values'': Journalist claims Trump was ''personally involved'' in Stephen Colbert ouster" [ref=e1209] [cursor=pointer]':
+                      - img [ref=e1211]
+                    - tooltip [ref=e1213]: More
+              - 'link "''So alien to our values'': Journalist claims Trump was ''personally involved'' in Stephen Colbert ouster - MSN - 8 hours ago" [ref=e1214] [cursor=pointer]':
+                - /url: ./read/CBMirwNBVV95cUxPMndyZ2stQkJDRXdKcU00dV9hZ0RCVzlmdlZrdlk2Z2xTU3gySDQ5WUx3c3ZUVEQwTkVyTWw1N1owSXVENGdzb3ZwWjROMzl4Q0E4SDFKMEFlUDBKSmhkQXd0N3pBN18ycHVTV3JQc0k4TEIxT2N5cGo2dUtTMHlIZmhwM1JNR0RYUUZuaXFnNkExUExRSWJYaG5tUWg0R2NkN1Y1TWo1bTdkVldwWThQTzlrNVp4VnZnQjB0dTJVWGNzbGZvcGJobkZYR1ZsMFl3VDJQTS0zZ1JQZzNPdW9vb2poS2FvZEtkWGd5TkNQQUxkR3RETktaNDVoWm9YaThTZFpmQ2NxSXUzcld6alJfLUNOWFZrUm5HRHRCclN5Z044czQ5QWpZVkhGeDBFMjQxVWJ0VWZxMjZaRHFac0ZyNkRJVDh6a3FVUXB3VDV5cmRsSGVCNUR3MXdfWVVYNUhUNlhwUUpIdHpZLVZmNW1SWndEZG9UQkx4aUZfNUNsRmdKcnhqRUpaNWJqQUJ4dldBalVQV0RvYzVVakxSd2c2T0ZkU3g5V19RNGJrMGRJZw?hl=en-US&gl=US&ceid=US%3Aen
+                - text: "'So alien to our values': Journalist claims Trump was 'personally involved' in Stephen Colbert ouster"
+          - time [ref=e1216]: 8 hours ago
+    - complementary [ref=e1217]:
+      - generic [ref=e1219]:
+        - generic [ref=e1222]:
+          - heading "Trump UFO when:1d" [level=2] [ref=e1223]
+          - generic [ref=e1224]: Search results
+        - generic [ref=e1227]:
+          - button "Save this search - Trump UFO when:1d" [ref=e1229]:
+            - img [ref=e1233]
+            - generic [ref=e1235]: Save
+          - tooltip [ref=e1236]: Save this search
