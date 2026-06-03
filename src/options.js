@@ -164,6 +164,7 @@ async function init() {
 
   if (!sets || Object.keys(sets).length === 0) {
     sets = DEFAULT_TEMPLATES;
+    await chrome.storage.sync.set({ nextQuerySets: DEFAULT_TEMPLATES });
   }
 
   Object.entries(sets).forEach(([name, queries]) => {

@@ -263,18 +263,12 @@ class DeepSeekResearchBot {
     // METHOD 1: Simulate Enter keypress
     if (simulateEnter) {
       console.log('[RTK] ⌨️ Simulating Enter keypress...');
-      ['keydown', 'keypress', 'keyup'].forEach(eventType => {
+      ['keydown', 'keyup'].forEach(eventType => {
         const event = new KeyboardEvent(eventType, {
           key: 'Enter',
           code: 'Enter',
-          keyCode: 13,
-          which: 13,
           bubbles: true,
-          cancelable: true,
-          ctrlKey: false,
-          metaKey: false,
-          shiftKey: false,
-          altKey: false
+          cancelable: true
         });
         textarea.dispatchEvent(event);
       });
@@ -305,16 +299,6 @@ class DeepSeekResearchBot {
         
       } else {
         console.warn('[RTK] ⚠️ Send button became disabled before click');
-        
-        // Try Enter as fallback
-        const enterEvent = new KeyboardEvent('keypress', {
-          key: 'Enter',
-          code: 'Enter',
-          keyCode: 13,
-          bubbles: true
-        });
-        textarea.dispatchEvent(enterEvent);
-        console.log('[RTK] ✓ Used Enter fallback');
       }
     }
 
@@ -514,7 +498,7 @@ class DeepSeekResearchBot {
     let iteration = 0;
     let researchData = { iterations: [] };
     
-    while (iteration < maxIterations) {
+    while (iteration < maxIterations +1) {
       iteration++;
       console.log(`\n${'─'.repeat(60)}`);
       console.log(`[RTK] 🔁 ITERATION ${iteration}/${maxIterations}`);
@@ -565,16 +549,20 @@ class DeepSeekResearchBot {
         insights 
       });
       
-      // Determine next question from query set, or use hardcoded fallback
+      // Determine next question: prioritize query set, then fallback to hardcoded
       let nextQuery = null;
 
       if (queries.length > 0) {
-        // Use queries from the selected set: iteration 1 done → queries[0], iteration 2 done → queries[1], etc.
+        // Use queries from the selected set: iteration 1 (initialQuery sent) → queries[0], iteration 2 → queries[1], etc.
         const queryIndex = iteration - 1;
-        if (queryIndex < queries.length && iteration < maxIterations) {
+        if (queryIndex < queries.length + 1) {
           nextQuery = queries[queryIndex];
+          console.log(`[RTK] 📋 Using query set question ${queryIndex + 1}/${queries.length}`);
+        } else {
+          console.log(`[RTK] ✅ All ${queries.length} queries from set exhausted`);
         }
       } else {
+        // Fallback to hardcoded questions if no query set provided
         if (iteration === 1) {
           nextQuery = 'Can you provide specific examples or implementation details?';
         } else if (iteration === 2) {
@@ -584,7 +572,8 @@ class DeepSeekResearchBot {
         }
       }
       
-      if (autoContinue && nextQuery && iteration < maxIterations) {
+      // Continue loop if: (1) we have a next question, (2) autoContinue is on, (3) haven't hit maxIterations
+      if (autoContinue && nextQuery) {
         currentQuery = nextQuery;
         console.log(`\n[RTK] ➡️ Next question: ${currentQuery}`);
         console.log(`[RTK] ⏱️ Waiting ${delayBetweenMessages/1000}s for button to re-enable...`);
@@ -601,6 +590,7 @@ class DeepSeekResearchBot {
         // Additional wait to ensure everything is settled
         await this.sleep(2000);
       } else {
+        console.log(`[RTK] 🛑 Loop terminating: nextQuery=${!!nextQuery}, autoContinue=${autoContinue}, iteration=${iteration}/${maxIterations}`);
         break;
       }
     }
