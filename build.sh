@@ -60,6 +60,8 @@ cp "${PROJECT_DIR}/src/content.js"      "${DIST_DIR}/src/"
 cp "${PROJECT_DIR}/src/background.js"   "${DIST_DIR}/src/"
 cp "${PROJECT_DIR}/src/sidepanel.html"  "${DIST_DIR}/src/"
 cp "${PROJECT_DIR}/src/sidepanel.js"    "${DIST_DIR}/src/"
+cp "${PROJECT_DIR}/src/options.js"    "${DIST_DIR}/src/"
+cp "${PROJECT_DIR}/src/options.html"    "${DIST_DIR}/src/"
 
 # Copy icons
 echo "🎨 Copying icons..."

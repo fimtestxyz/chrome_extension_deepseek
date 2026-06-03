@@ -26,6 +26,10 @@
   "side_panel": {
     "default_path": "src/sidepanel.html"
   },
+  "options_ui": {
+    "page": "src/options.html",
+    "open_in_tab": true
+  },
   "action": {
     "default_title": "DeepSeek Research Bot",
     "default_icon": {

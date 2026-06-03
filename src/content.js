@@ -270,7 +270,11 @@ class DeepSeekResearchBot {
           keyCode: 13,
           which: 13,
           bubbles: true,
-          cancelable: true
+          cancelable: true,
+          ctrlKey: false,
+          metaKey: false,
+          shiftKey: false,
+          altKey: false
         });
         textarea.dispatchEvent(event);
       });
@@ -488,7 +492,8 @@ class DeepSeekResearchBot {
       maxIterations = 3,
       autoContinue = true,
       verbose = true,
-      delayBetweenMessages = 5000
+      delayBetweenMessages = 5000,
+      queries = []
     } = options;
     
     console.log('\n' + '='.repeat(60));
@@ -560,15 +565,23 @@ class DeepSeekResearchBot {
         insights 
       });
       
-      // Generate follow-up question
+      // Determine next question from query set, or use hardcoded fallback
       let nextQuery = null;
-      
-      if (iteration === 1) {
-        nextQuery = 'Can you provide specific examples or implementation details?';
-      } else if (iteration === 2) {
-        nextQuery = 'What are the best practices and common pitfalls?';
-      } else if (iteration < maxIterations) {
-        nextQuery = 'What are the key recommendations and next steps?';
+
+      if (queries.length > 0) {
+        // Use queries from the selected set: iteration 1 done → queries[0], iteration 2 done → queries[1], etc.
+        const queryIndex = iteration - 1;
+        if (queryIndex < queries.length && iteration < maxIterations) {
+          nextQuery = queries[queryIndex];
+        }
+      } else {
+        if (iteration === 1) {
+          nextQuery = 'Can you provide specific examples or implementation details?';
+        } else if (iteration === 2) {
+          nextQuery = 'What are the best practices and common pitfalls?';
+        } else if (iteration < maxIterations) {
+          nextQuery = 'What are the key recommendations and next steps?';
+        }
       }
       
       if (autoContinue && nextQuery && iteration < maxIterations) {
@@ -685,7 +698,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         case 'deepResearch':
           const deepResult = await researchBot.deepResearch(message.query, {
             maxIterations: message.iterations || 3,
-            delayBetweenMessages: message.delay || 6000
+            delayBetweenMessages: message.delay || 6000,
+            queries: message.queries || []
           });
           sendResponse({ success: true, result: deepResult });
           break;
