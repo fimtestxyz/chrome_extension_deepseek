@@ -1,20 +1,19 @@
-const DEFAULT_TEMPLATES = {
-  "Technical Dive": [
-    "Can you provide specific examples or implementation details?",
-    "What are the best practices and common pitfalls?",
-    "What are the key recommendations and next steps?"
-  ],
-  "Broad Exploration": [
-    "What are the related concepts or alternative approaches I should know about?",
-    "How does this fit into the larger context of the field?",
-    "What are the most controversial or debated aspects of this topic?"
-  ]
-};
+async function fetchDefaultTemplates() {
+  try {
+    const response = await fetch(chrome.runtime.getURL('src/default-questions.json'));
+    return await response.json();
+  } catch (e) {
+    console.error('Failed to load default templates:', e);
+    return {};
+  }
+}
 
 const setsContainer = document.getElementById('sets-container');
 const addSetBtn = document.getElementById('add-set-btn');
 const saveBtn = document.getElementById('save-btn');
 const themeToggle = document.getElementById('theme-toggle');
+
+let currentDragType = null; // Track what's being dragged
 
 function createSetUI(name, queries) {
   const div = document.createElement('div');
@@ -23,10 +22,14 @@ function createSetUI(name, queries) {
 
   // Set Drag and Drop
   div.addEventListener('dragstart', (e) => {
-    e.dataTransfer.setData('text/plain', 'set');
+    currentDragType = 'set';
+    e.dataTransfer.effectAllowed = 'move';
     div.classList.add('dragging');
   });
-  div.addEventListener('dragend', () => div.classList.remove('dragging'));
+  div.addEventListener('dragend', () => {
+    currentDragType = null;
+    div.classList.remove('dragging');
+  });
 
   const header = document.createElement('div');
   header.className = 'set-header';
@@ -55,10 +58,14 @@ function createSetUI(name, queries) {
 
     row.addEventListener('dragstart', (e) => {
       e.stopPropagation();
-      e.dataTransfer.setData('text/plain', 'query');
+      currentDragType = 'query';
+      e.dataTransfer.effectAllowed = 'move';
       row.classList.add('dragging');
     });
-    row.addEventListener('dragend', () => row.classList.remove('dragging'));
+    row.addEventListener('dragend', () => {
+      currentDragType = null;
+      row.classList.remove('dragging');
+    });
 
     row.innerHTML = `
       <span class="drag-handle">☰</span>
@@ -88,18 +95,16 @@ function createSetUI(name, queries) {
 setsContainer.addEventListener('dragover', (e) => {
   e.preventDefault();
   const dragging = document.querySelector('.dragging');
-  if (!dragging) return;
-
-  const type = e.dataTransfer.getData('text/plain');
+  if (!dragging || !currentDragType) return;
   
-  if (type === 'set') {
+  if (currentDragType === 'set') {
     const afterElement = getDragAfterElement(setsContainer, e.clientY, '.template-set');
     if (afterElement == null) {
       setsContainer.appendChild(dragging);
     } else {
       setsContainer.insertBefore(dragging, afterElement);
     }
-  } else if (type === 'query') {
+  } else if (currentDragType === 'query') {
     const list = dragging.closest('.queries-list');
     if (!list) return;
     
@@ -163,8 +168,8 @@ async function init() {
   let sets = data.nextQuerySets;
 
   if (!sets || Object.keys(sets).length === 0) {
-    sets = DEFAULT_TEMPLATES;
-    await chrome.storage.sync.set({ nextQuerySets: DEFAULT_TEMPLATES });
+    sets = await fetchDefaultTemplates();
+    await chrome.storage.sync.set({ nextQuerySets: sets });
   }
 
   Object.entries(sets).forEach(([name, queries]) => {

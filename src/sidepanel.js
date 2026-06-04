@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   const logContainer = document.getElementById('logContainer');
   const themeToggle = document.getElementById('themeToggle');
+  const exportMdBtn = document.getElementById('exportMdBtn');
+  const exportJsonBtn = document.getElementById('exportJsonBtn');
 
   let sentMessagesCount = 0;
   let currentIterationsCount = 0;
@@ -322,4 +324,77 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ── Init ───────────────────────────────────────────────
   await initTheme();
   await loadQuerySets();
+
+  // ── Export Functions ───────────────────────────────────
+  async function captureConversation() {
+    return new Promise((resolve) => {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        if (!tabs[0] || !tabs[0].url || !tabs[0].url.includes('chat.deepseek.com')) {
+          log('Open chat.deepseek.com to export conversation', 'error');
+          resolve(null);
+          return;
+        }
+        chrome.tabs.sendMessage(tabs[0].id, { target: 'content', action: 'captureHistory' }, (response) => {
+          if (chrome.runtime.lastError) {
+            log('Failed to capture conversation', 'error');
+            resolve(null);
+            return;
+          }
+          resolve(response);
+        });
+      });
+    });
+  }
+
+  function downloadFile(content, filename, mimeType) {
+    const blob = new Blob([content], { type: mimeType });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function formatAsMarkdown(conversation) {
+    let md = '# DeepSeek Conversation\n\n';
+    md += `*Exported on ${new Date().toLocaleString()}*\n\n---\n\n`;
+    conversation.forEach(msg => {
+      const role = msg.role === 'user' ? '**You:**' : '**DeepSeek:**';
+      md += `${role}\n\n${msg.content}\n\n---\n\n`;
+    });
+    return md;
+  }
+
+  function formatAsJson(conversation) {
+    return JSON.stringify({
+      exportedAt: new Date().toISOString(),
+      messageCount: conversation.length,
+      conversation: conversation
+    }, null, 2);
+  }
+
+  exportMdBtn.addEventListener('click', async () => {
+    const response = await captureConversation();
+    if (response && response.success && response.conversation.length > 0) {
+      const md = formatAsMarkdown(response.conversation);
+      const timestamp = new Date().toISOString().slice(0, 10);
+      downloadFile(md, `deepseek-conversation-${timestamp}.md`, 'text/markdown');
+      log(`Exported ${response.count} messages as Markdown`, 'success');
+    } else if (response && response.conversation.length === 0) {
+      log('No conversation found to export', 'warning');
+    }
+  });
+
+  exportJsonBtn.addEventListener('click', async () => {
+    const response = await captureConversation();
+    if (response && response.success && response.conversation.length > 0) {
+      const json = formatAsJson(response.conversation);
+      const timestamp = new Date().toISOString().slice(0, 10);
+      downloadFile(json, `deepseek-conversation-${timestamp}.json`, 'application/json');
+      log(`Exported ${response.count} messages as JSON`, 'success');
+    } else if (response && response.conversation.length === 0) {
+      log('No conversation found to export', 'warning');
+    }
+  });
 });

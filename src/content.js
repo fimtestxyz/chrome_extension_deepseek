@@ -427,6 +427,38 @@ class DeepSeekResearchBot {
   }
 
   /**
+   * Capture the current conversation from the DOM structurally
+   */
+  captureConversation() {
+    const conversation = [];
+    // Based on deepseek_page.html:
+    // User messages are usually in .fbb737a4
+    // Assistant messages are in .ds-markdown.ds-assistant-message-main-content
+    const messages = document.querySelectorAll('.ds-message');
+
+    messages.forEach(msg => {
+      const userEl = msg.querySelector('.fbb737a4');
+      const assistantEl = msg.querySelector('.ds-markdown.ds-assistant-message-main-content');
+
+      if (userEl) {
+        conversation.push({
+          role: 'user',
+          content: userEl.innerText.trim(),
+          timestamp: Date.now()
+        });
+      } else if (assistantEl) {
+        conversation.push({
+          role: 'assistant',
+          content: assistantEl.innerText.trim(),
+          timestamp: Date.now()
+        });
+      }
+    });
+
+    return conversation;
+  }
+
+  /**
    * Sleep utility
    */
   sleep(ms) {
@@ -700,13 +732,22 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
           break;
           
         case 'getStatus':
-          sendResponse({ 
-            success: true, 
+          sendResponse({
+            success: true,
             isProcessing: researchBot.isProcessing,
             historyLength: researchBot.conversationHistory.length
           });
           break;
-          
+
+        case 'captureHistory':
+          const captured = researchBot.captureConversation();
+          sendResponse({
+            success: true,
+            conversation: captured,
+            count: captured.length
+          });
+          break;
+
         default:
           sendResponse({ success: false, error: 'Unknown action' });
       }
