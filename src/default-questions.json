@@ -17,5 +17,31 @@
    "What is the 'invariant' here—the part of this principle that remains true across all contexts?",
    "Under what specific conditions does this logic fail or stop being applicable?",
    "What is the most common misconception experts have about this, and why is it wrong?"
+ ],
+ "Investment Analyst": [
+   "Deconstruct this company's business model into its most basic units of value creation. Which specific assumption about the future must be true for this company to maintain its current valuation?",
+   "Identify the most aggressive forces (technological, regulatory, or competitive) currently attacking the core assumptions identified in the previous step. If this company fails in 3 years, what was the exact cause?",
+   "Compare the prevailing market sentiment/narrative around this ticker with the raw financial and geopolitical data. Where is the market most wrong—overestimating a strength or underestimating a risk?",
+   "Analyze the asymmetrical upside and downside. What is the 'black swan' event that could 2x the value, and what is the 'grey swan' that would wipe out 50% of it?",
+   "Based on the deconstruction and stress tests, assign a probability to the Bull, Bear, and Base cases. Given the current price, is the expected value positive? Provide a verdict (Buy/Sell/Hold) based on the risk-adjusted probability."
+ ],
+ "Zen Master Investor": [
+   "Did the moat change, or is this just cyclical noise?",
+   "What is the normalized earnings power in 5 years?",
+   "What is the worst-case permanent loss of capital?",
+   "Am I within my circle of competence for this business?",
+   "Would I buy this today if the market closed for 5 years?"
+ ],
+ "Fast Learner": [
+   "What is the ONE-SENTENCE elevator pitch that explains what this field does and why it exists?",
+   "What are the 5-7 CORE mental models or frameworks that practitioners use 80% of the time?",
+   "Identify the 'vocabulary of the tribe'—decode the top 20 jargon terms with plain-English explanations.",
+   "Give me 2-3 familiar analogies from everyday life that map to the core concepts here.",
+   "What problem does this field solve that humans couldn't solve before, or solves much better?",
+   "Walk through the 'learning ladder': what should I learn first, second, third for fastest understanding?",
+   "What are the most common misconceptions beginners have, and why are they wrong?",
+   "What are the 'first principles'—the unchangeable axioms that everything else builds on?",
+   "How does this field connect to other fields I might know—what are the bridges?",
+   "Where is the field headed in the next 5-10 years, and what should I pay attention to?"
  ]
 }
