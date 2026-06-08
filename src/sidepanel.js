@@ -16,9 +16,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const querySetSelect = document.getElementById('querySetSelect');
   const queryPreview = document.getElementById('queryPreview');
   
-  const iterationsSlider = document.getElementById('iterations');
-  const iterationsValue = document.getElementById('iterationsValue');
-  
   const delaySlider = document.getElementById('delay');
   const delayValue = document.getElementById('delayValue');
   
@@ -91,32 +88,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     const selected = querySetSelect.value;
     const queries = cachedSets[selected] || [];
     
-    if (queries.length === 0) {
-      queryPreview.innerHTML = '<em>No questions in this set.</em>';
-      return;
-    }
-
-    queryPreview.innerHTML = '<ol>' + queries.map(q => `<li>${q}</li>`).join('') + '</ol>';
-    
-    // Auto-adjust iterations to match set size
-    const currentIter = parseInt(iterationsSlider.value);
-    if (currentIter > queries.length) {
-      iterationsSlider.value = queries.length;
-      iterationsValue.textContent = queries.length;
-      document.querySelector('#iterations ~ .slider-value').textContent = queries.length;
-    }
-    iterationsSlider.max = queries.length;
+  if (queries.length === 0) {
+    queryPreview.innerHTML = '<em>No questions in this set.</em>';
+    return;
   }
+
+  queryPreview.innerHTML = '<ol>' + queries.map(q => `<li>${q}</li>`).join('') + '</ol>';
+}
 
   querySetSelect.addEventListener('change', updatePreview);
 
   // ── Sliders ────────────────────────────────────────────
-  iterationsSlider.addEventListener('input', (e) => {
-    const val = e.target.value;
-    iterationsValue.textContent = val;
-    document.querySelector('#iterations ~ .slider-value').textContent = val;
-  });
-
   delaySlider.addEventListener('input', (e) => {
     const val = e.target.value;
     delayValue.textContent = val;
@@ -185,7 +167,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const queries = cachedSets[selectedSet];
-    const iterations = parseInt(iterationsSlider.value);
+    const iterations = queries.length;
     const delay = parseInt(delaySlider.value) * 1000;
 
     setUIBusy(true);
@@ -227,7 +209,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     deepQuery.disabled = isBusy;
     deepResearchBtn.disabled = isBusy;
     querySetSelect.disabled = isBusy;
-    iterationsSlider.disabled = isBusy;
     delaySlider.disabled = isBusy;
   }
 

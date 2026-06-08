@@ -4,9 +4,18 @@
     "What are the best practices and common pitfalls?",
     "What are the key recommendations and next steps?"
   ],
-  "Broad Exploration": [
-    "What are the related concepts or alternative approaches I should know about?",
-    "How does this fit into the larger context of the field?",
-    "What are the most controversial or debated aspects of this topic?"
-  ]
+ "Broad Exploration": [
+   "What are the related concepts or alternative approaches I should know about?",
+   "How does this fit into the larger context of the field?",
+   "What are the most controversial or debated aspects of this topic?"
+ ]
+ ,
+ "Deep Researcher": [
+   "What are the fundamental axioms or first principles that govern this topic?",
+   "Can you strip away the jargon and explain the core intuition using a cross-domain analogy?",
+   "Walk me through the exact causal mechanism: how does [Input] lead to [Output] step-by-step?",
+   "What is the 'invariant' here—the part of this principle that remains true across all contexts?",
+   "Under what specific conditions does this logic fail or stop being applicable?",
+   "What is the most common misconception experts have about this, and why is it wrong?"
+ ]
 }
