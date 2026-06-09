@@ -51,3 +51,6 @@ temp/
 
 # rtk
 .rtk/
+
+.understand-anything/
+.codegraph/

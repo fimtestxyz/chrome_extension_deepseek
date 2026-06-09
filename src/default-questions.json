@@ -1,4 +1,12 @@
 {
+  "Jane Street Trader": [
+    "1. Regime Detection (morning, macro context): Analyze the current market regime for [Instrument/Sector]. Identify if we are in a mean-reverting, trending, or volatile regime. Check macro catalysts (CPI, FOMC, Earnings) and current volatility surfaces. What is the dominant driver of price action this morning?",
+    "2. Market Microstructure (pre-trade, specific instrument): Evaluate the order book for [Instrument]. Analyze bid-ask spreads, order flow toxicity (VPIN), and depth. Are there significant icebergs or large institutional prints? How is the liquidity profile compared to the 30-day moving average?",
+    "3. Probabilistic Edge Calculator (before sizing): Given the regime and microstructure, quantify the edge. What is the expected value (EV) of this trade? Calculate the probability of success vs. failure. Compare the current price to the theoretical fair value (arb-free). What is the implied volatility vs. historical realized volatility?",
+    "4. Adversarial Devil's Advocate (automatic bear case): Act as a skeptical risk manager. Construct the strongest possible bear case for this long position (or bull case for short). Why is this trade a 'trap'? What tail risk is being ignored? If this trade loses 2x the expected VAR, what likely happened?",
+    "5. Execution Quality Auditor (before sending to algo): Review the proposed execution strategy. Should this be a passive limit order, a VWAP slice, or a highly aggressive take? How will we minimize slippage and market impact? Define the 'walk-away' price where the edge disappears.",
+    "6. Export structured JSON (pipe into trade journal / risk system): Summarize the entire analysis into a structured JSON format suitable for a trade journal and risk management system. Include: Regime, Microstructure Score, Calculated Edge, Max Risk, and Execution Plan."
+  ],
   "Technical Dive": [
     "Can you provide specific examples or implementation details?",
     "What are the best practices and common pitfalls?",
