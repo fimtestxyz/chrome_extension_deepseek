@@ -307,6 +307,22 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadQuerySets();
 
   // ── Export Functions ───────────────────────────────────
+
+  /** Scroll the DeepSeek page to top via content script */
+  async function scrollToTop() {
+    return new Promise((resolve) => {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        if (!tabs[0] || !tabs[0].url || !tabs[0].url.includes('chat.deepseek.com')) {
+          resolve(null);
+          return;
+        }
+        chrome.tabs.sendMessage(tabs[0].id, { target: 'content', action: 'scrollToTop' }, (response) => {
+          resolve(response);
+        });
+      });
+    });
+  }
+
   async function captureConversation() {
     return new Promise((resolve) => {
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -356,6 +372,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   exportMdBtn.addEventListener('click', async () => {
+    await scrollToTop();
     const response = await captureConversation();
     if (response && response.success && response.conversation.length > 0) {
       const md = formatAsMarkdown(response.conversation);
@@ -368,6 +385,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   exportJsonBtn.addEventListener('click', async () => {
+    await scrollToTop();
     const response = await captureConversation();
     if (response && response.success && response.conversation.length > 0) {
       const json = formatAsJson(response.conversation);

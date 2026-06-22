@@ -108,11 +108,11 @@ class DeepSeekResearchBot {
 
     while (Date.now() - startTime < timeout) {
       // Strategy 1: Specific assistant selectors
-      let assistantMessages = Array.from(document.querySelectorAll('.ds-message-container, [data-message-role], .message, [class*="assistant"]'))
+      let assistantMessages = Array.from(document.querySelectorAll('.ds-message-container, [data-message-role], .message, [class*="assistant"], .ds-markdown'))
         .filter(m => {
           const role = m.getAttribute('data-message-role');
           if (role === 'assistant') return true;
-          return m.classList.contains('assistant') || m.querySelector('.assistant');
+          return m.classList.contains('assistant') || m.querySelector('.assistant') || m.classList.contains('ds-markdown');
         });
 
       // Strategy 2: Fallback - newest non-user message
@@ -302,6 +302,23 @@ class DeepSeekResearchBot {
       }
     }
 
+    // After sending, wait 1s then press Escape.
+    // Dispatch on both document and window to cover framework-level
+    // listeners (React delegates to document, others listen on window).
+    await this.sleep(1000);
+    ['keydown', 'keyup'].forEach(eventType => {
+      const escapeEvent = new KeyboardEvent(eventType, {
+        key: 'Escape',
+        code: 'Escape',
+        bubbles: true,
+        cancelable: true,
+        composed: true
+      });
+      document.dispatchEvent(escapeEvent);
+      window.dispatchEvent(escapeEvent);
+    });
+    console.log('[RTK] ✓ Escape key dispatched after send');
+
     // Store in history
     this.conversationHistory.push({ role: 'user', content: text, timestamp: Date.now() });
     
@@ -347,11 +364,11 @@ class DeepSeekResearchBot {
       await this.sleep(1500);
       
       // Strategy 1: Specific assistant selectors
-      let assistantMessages = Array.from(document.querySelectorAll('.ds-message-container, [data-message-role], .message, [class*="assistant"]'))
+      let assistantMessages = Array.from(document.querySelectorAll('.ds-message-container, [data-message-role], .message, [class*="assistant"], .ds-markdown'))
         .filter(m => {
           const role = m.getAttribute('data-message-role');
           if (role === 'assistant') return true;
-          return m.classList.contains('assistant') || m.querySelector('.assistant');
+          return m.classList.contains('assistant') || m.querySelector('.assistant') || m.classList.contains('ds-markdown');
         });
       
       // Strategy 2: Fallback - find the newest message that isn't the user's
@@ -403,11 +420,11 @@ class DeepSeekResearchBot {
         }
       }
 
-      // Strategy 3: Emergency Fallback - if the send button is enabled, the AI is likely done
+      // Strategy 3: Emergency Fallback - if the send button is enabled AND content is stable, the AI is likely done
       const sendButton = document.querySelector('button[type="submit"]') || document.querySelector('.ds-button--primary');
       if (sendButton && !sendButton.disabled && !sendButton.classList.contains('ds-button--disabled') && sendButton.getAttribute('aria-disabled') !== 'true') {
-          if (lastLength > 10) {
-              console.log('[RTK] ✓ AI finished (Send button re-enabled)');
+          if (lastLength > 10 && stableCount >= 2) {
+              console.log('[RTK] ✓ AI finished (Send button re-enabled and content stable)');
               return lastContent;
           }
       }
@@ -456,6 +473,29 @@ class DeepSeekResearchBot {
     });
 
     return conversation;
+  }
+
+  /**
+   * Progressively scroll the page quickly to top
+   * Animates in small increments for a snappy scroll-up effect
+   */
+  async scrollToTop() {
+    const duration = 400; // ms
+    const startTime = Date.now();
+    const startScroll = window.scrollY || document.documentElement.scrollTop;
+    const step = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic for smooth deceleration
+      const eased = 1 - Math.pow(1 - progress, 3);
+      window.scrollTo(0, startScroll * (1 - eased));
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    };
+    requestAnimationFrame(step);
+    // Wait for scroll to settle
+    await this.sleep(duration + 100);
   }
 
   /**
@@ -530,7 +570,7 @@ class DeepSeekResearchBot {
     let iteration = 0;
     let researchData = { iterations: [] };
     
-    while (iteration < maxIterations +1) {
+    while (iteration < maxIterations+1) {
       iteration++;
       console.log(`\n${'─'.repeat(60)}`);
       console.log(`[RTK] 🔁 ITERATION ${iteration}/${maxIterations}`);
@@ -746,6 +786,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             conversation: captured,
             count: captured.length
           });
+          break;
+
+        case 'scrollToTop':
+          await researchBot.scrollToTop();
+          sendResponse({ success: true });
           break;
 
         default:
